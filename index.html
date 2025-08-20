@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SynthesisLogic - Digital Innovation Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .app-icon {
+            transition: transform 0.3s ease;
+        }
+        .app-card:hover .app-icon {
+            transform: scale(1.05);
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #60a5fa, #a855f7, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-white">
+    <!-- Header -->
+    <header class="bg-gray-900 text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-20">
+            <div class="text-center">
+                <div class="inline-flex items-center space-x-2 text-gray-400 mb-8">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                        <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                    </svg>
+                    <span class="text-sm font-medium">Digital Innovation Studio</span>
+                </div>
+                
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light mb-6 tracking-tight">
+                    <span class="font-bold gradient-text">Synthesis</span><span class="text-white">Logic</span>
+                </h1>
+                
+                <p class="text-lg sm:text-xl text-gray-300 mb-12 max-w-2xl mx-auto font-light leading-relaxed px-4">
+                    We create new products and bring them to market with intelligent engineering and strategic marketing
+                </p>
+
+                <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-sm text-gray-400 px-4">
+                    <div class="flex items-center space-x-2">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <span>Product Development</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                        </svg>
+                        <span>Full-Stack Solutions</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span>Market Launch</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Apps Showcase -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-3xl sm:text-4xl font-light text-gray-900 mb-4">Our Products</h2>
+                <p class="text-base sm:text-lg text-gray-600 font-light px-4">
+                    From concept to market - complete product solutions
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <!-- AItist App -->
+                <div class="app-card bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 group">
+                    <div class="text-center">
+                        <div class="mb-6 flex justify-center">
+                            <div class="app-icon w-20 h-20 rounded-2xl overflow-hidden shadow-lg bg-gray-100">
+                                <img src="aitist.webp" alt="AItist app icon" class="w-full h-full object-cover" 
+                                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="w-full h-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center" style="display: none;">
+                                    <span class="text-white font-bold text-lg">AI</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h3 class="text-xl sm:text-2xl font-medium mb-3 text-gray-900">AItist</h3>
+                        <p class="text-gray-600 mb-4 font-light text-sm sm:text-base">AI: Any Photo to Any Style</p>
+                        <p class="text-sm text-gray-700 mb-6 leading-relaxed">Transform ordinary photos into extraordinary artwork in just 15 seconds with 34 unique artistic styles.</p>
+                        
+                        <div class="space-y-2 mb-8 text-left">
+                            <div class="flex items-center space-x-3 text-sm">
+                                <div class="w-1.5 h-1.5 bg-gray-400 rounded-full flex-shrink-0"></div>
+                                <span class="text-gray-700">15-second transformations</span>
+                            </div>
+                            <div class="flex items-center space-x-3 text-sm">
+                                <div class="w-1.5 h-1.5 bg-gray-400 rounded-full flex-shrink-0"></div>
+                                <span class="text-gray-700">34 artistic styles</span>
+                            </div>
+                            <div class="flex items-center space-x-3 text-sm">
+                                <div class="w-1.5 h-1.5 bg-gray-400 rounded-full flex-shrink-0"></div>
+                                <span class="text-gray-700">Credits never expire</span>
+                            </div>
+                            <div class="flex items-center space-x-3 text-sm">
+                                <div class="w-1.5 h-1.5 bg-gray-400 rounded-full flex-shrink-0"></div>
+                                <span class="text-gray-700">Social media ready</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="text-left">
+                                <div class="text-xs text-gray-500 mb-1">Photo & Video</div>
+                                <div class="font-medium text-gray-900">Free</div>
+                            </div>
+                            
+                            <div class="text-right">
+                                <div class="flex items-center space-x-1 text-yellow-500 mb-1">
+                                    <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                    </svg>
+                                    <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                    </svg>
+                                    <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                    </svg>
+                                    <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                    </svg>
+                                    <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                    </svg>
+                                </div>
+                                <div class="text-xs text-gray-500">App Store</div>
+                            </div>
+                        </div>
+
+                        <a href="https://apps.apple.com/us/app/sketchgenius/id6748335765" target="_blank" rel="noopener noreferrer"
+                           class="inline-flex items-center justify-center w-full space-x-2 bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-xl transition-colors group-hover:scale-105 transform duration-300">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                            <span class="font-medium">Download</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-3xl sm:text-4xl font-light text-gray-900 mb-4">Our Approach</h2>
+                <p class="text-base sm:text-lg text-gray-600 font-light max-w-2xl mx-auto px-4">
+                    From backend infrastructure to market strategy - we build complete solutions
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
+                <div class="text-center group">
+                    <div class="w-16 h-16 bg-gray-900 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-medium mb-4 text-gray-900">Engineering</h3>
+                    <p class="text-sm sm:text-base text-gray-600 leading-relaxed font-light px-2">
+                        Full-stack development from server architecture to user interfaces. Every layer optimized for performance.
+                    </p>
+                </div>
+
+                <div class="text-center group">
+                    <div class="w-16 h-16 bg-gray-900 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-medium mb-4 text-gray-900">Innovation</h3>
+                    <p class="text-sm sm:text-base text-gray-600 leading-relaxed font-light px-2">
+                        We don't just build products - we create new categories and solve problems others haven't identified yet.
+                    </p>
+                </div>
+
+                <div class="text-center group">
+                    <div class="w-16 h-16 bg-gray-900 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-medium mb-4 text-gray-900">Marketing</h3>
+                    <p class="text-sm sm:text-base text-gray-600 leading-relaxed font-light px-2">
+                        Strategic market entry and growth. We understand how to position and scale new products effectively.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+            <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-lg">
+                <div class="w-16 h-16 sm:w-20 sm:h-20 bg-gray-900 rounded-2xl flex items-center justify-center mx-auto mb-6 sm:mb-8">
+                    <svg class="w-8 h-8 sm:w-10 sm:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                </div>
+                
+                <h2 class="text-3xl sm:text-4xl font-light text-gray-900 mb-4 sm:mb-6">Let's Connect</h2>
+                <p class="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 font-light max-w-2xl mx-auto px-4">
+                    Have an idea? Want to collaborate? We'd love to hear from you.
+                </p>
+                
+                <div class="space-y-2 sm:space-y-3 mb-8 sm:mb-10">
+                    <div class="text-gray-700 text-sm sm:text-base">
+                        <a href="mailto:hello@synthesislogic.com" class="text-gray-900 hover:text-gray-600 transition-colors break-all">
+                            hello@synthesislogic.com
+                        </a>
+                    </div>
+                </div>
+
+                <a href="mailto:hello@synthesislogic.com"
+                   class="inline-flex items-center space-x-3 bg-gray-900 hover:bg-gray-800 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl transition-colors group text-sm sm:text-base">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                    <span class="font-medium">Start a Conversation</span>
+                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+            <h3 class="text-xl sm:text-2xl font-light text-white mb-2">SynthesisLogic</h3>
+            <p class="text-sm font-light mb-4">Building tomorrow's products today</p>
+            <div class="text-xs">
+                © 2025 SynthesisLogic. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                    </svg>
+                                    <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                    </svg>
+                                    <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                    </svg>
+                                    <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                    </svg>
+                                    <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                    </svg>
+                                </div>
+                                <div class="text-xs text-gray-500">App Store</div>
+                            </div>
+                        </div>
+
+                        <a href="https://apps.apple.com/us/app/aitist/id6745760049" target="_blank" rel="noopener noreferrer"
+                           class="inline-flex items-center justify-center w-full space-x-2 bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-xl transition-colors group-hover:scale-105 transform duration-300">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                            <span class="font-medium">Download</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- BurnTracker App -->
+                <div class="app-card bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 group">
+                    <div class="text-center">
+                        <div class="mb-6 flex justify-center">
+                            <div class="app-icon w-20 h-20 rounded-2xl overflow-hidden shadow-lg bg-gray-100">
+                                <img src="burntracker.webp" alt="BurnTracker app icon" class="w-full h-full object-cover" 
+                                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="w-full h-full bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center" style="display: none;">
+                                    <span class="text-white font-bold text-lg">BT</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h3 class="text-xl sm:text-2xl font-medium mb-3 text-gray-900">BurnTracker</h3>
+                        <p class="text-gray-600 mb-4 font-light text-sm sm:text-base">Track Workouts & Burn Calories</p>
+                        <p class="text-sm text-gray-700 mb-6 leading-relaxed">All-in-one fitness companion with real-time tracking and HealthKit integration.</p>
+                        
+                        <div class="space-y-2 mb-8 text-left">
+                            <div class="flex items-center space-x-3 text-sm">
+                                <div class="w-1.5 h-1.5 bg-gray-400 rounded-full flex-shrink-0"></div>
+                                <span class="text-gray-700">20+ workout types</span>
+                            </div>
+                            <div class="flex items-center space-x-3 text-sm">
+                                <div class="w-1.5 h-1.5 bg-gray-400 rounded-full flex-shrink-0"></div>
+                                <span class="text-gray-700">Real-time GPS</span>
+                            </div>
+                            <div class="flex items-center space-x-3 text-sm">
+                                <div class="w-1.5 h-1.5 bg-gray-400 rounded-full flex-shrink-0"></div>
+                                <span class="text-gray-700">HealthKit sync</span>
+                            </div>
+                            <div class="flex items-center space-x-3 text-sm">
+                                <div class="w-1.5 h-1.5 bg-gray-400 rounded-full flex-shrink-0"></div>
+                                <span class="text-gray-700">Progress reports</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="text-left">
+                                <div class="text-xs text-gray-500 mb-1">Health & Fitness</div>
+                                <div class="font-medium text-gray-900">Free</div>
+                            </div>
+                            
+                            <div class="text-right">
+                                <div class="flex items-center space-x-1 text-yellow-500 mb-1">
+                                    <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                    </svg>
+                                    <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                    </svg>
+                                    <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                    </svg>
+                                    <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                    </svg>
+                                    <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                    </svg>
+                                </div>
+                                <div class="text-xs text-gray-500">App Store</div>
+                            </div>
+                        </div>
+
+                        <a href="https://apps.apple.com/us/app/burntracker-fitness-calorie/id6745753122" target="_blank" rel="noopener noreferrer"
+                           class="inline-flex items-center justify-center w-full space-x-2 bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-xl transition-colors group-hover:scale-105 transform duration-300">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                            <span class="font-medium">Download</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- SketchGenius App -->
+                <div class="app-card bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 group">
+                    <div class="text-center">
+                        <div class="mb-6 flex justify-center">
+                            <div class="app-icon w-20 h-20 rounded-2xl overflow-hidden shadow-lg bg-gray-100">
+                                <img src="sketchgenius.webp" alt="SketchGenius app icon" class="w-full h-full object-cover" 
+                                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="w-full h-full bg-gradient-to-br from-blue-500 to-indigo-500 flex items-center justify-center" style="display: none;">
+                                    <span class="text-white font-bold text-lg">SG</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h3 class="text-xl sm:text-2xl font-medium mb-3 text-gray-900">SketchGenius</h3>
+                        <p class="text-gray-600 mb-4 font-light text-sm sm:text-base">Draw, Write, Create with AI</p>
+                        <p class="text-sm text-gray-700 mb-6 leading-relaxed">Turn simple drawings into stunning AI art with 130+ professional styles and Apple Pencil support.</p>
+                        
+                        <div class="space-y-2 mb-8 text-left">
+                            <div class="flex items-center space-x-3 text-sm">
+                                <div class="w-1.5 h-1.5 bg-gray-400 rounded-full flex-shrink-0"></div>
+                                <span class="text-gray-700">130+ AI styles</span>
+                            </div>
+                            <div class="flex items-center space-x-3 text-sm">
+                                <div class="w-1.5 h-1.5 bg-gray-400 rounded-full flex-shrink-0"></div>
+                                <span class="text-gray-700">Apple Pencil support</span>
+                            </div>
+                            <div class="flex items-center space-x-3 text-sm">
+                                <div class="w-1.5 h-1.5 bg-gray-400 rounded-full flex-shrink-0"></div>
+                                <span class="text-gray-700">Text overlays</span>
+                            </div>
+                            <div class="flex items-center space-x-3 text-sm">
+                                <div class="w-1.5 h-1.5 bg-gray-400 rounded-full flex-shrink-0"></div>
+                                <span class="text-gray-700">Photo collages</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="text-left">
+                                <div class="text-xs text-gray-500 mb-1">Graphics & Design</div>
+                                <div class="font-medium text-gray-900">Free</div>
+                            </div>
+                            
+                            <div class="text-right">
+                                <div class="flex items-center space-x-1 text-yellow-500 mb-1">
+                                    <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07
