@@ -20,7 +20,17 @@
     <meta property="twitter:description" content="We create new products and bring them to market with intelligent engineering and strategic marketing">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- React 18 -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    
+    <!-- Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     
     <style>
         body {
@@ -52,26 +62,9 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
-        
-        .debug-info {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            background: rgba(0,0,0,0.8);
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-            font-size: 12px;
-            z-index: 9999;
-        }
     </style>
 </head>
 <body>
-    <div class="debug-info" id="debug-info">
-        🔍 Debug Info:<br>
-        <span id="debug-status">Starting...</span>
-    </div>
-
     <div id="root">
         <div class="loading">
             <div class="spinner"></div>
@@ -79,154 +72,7 @@
         </div>
     </div>
 
-    <script>
-        console.log("🟢 HTML Script started");
-        
-        function updateDebug(message) {
-            const debugEl = document.getElementById('debug-status');
-            if (debugEl) {
-                debugEl.innerHTML += '<br>' + message;
-            }
-            console.log("🔍 DEBUG:", message);
-            
-            // Also update title to show current status
-            document.title = `Debug: ${message}`;
-        }
-        
-        updateDebug("HTML loaded");
-        
-        // Check if all required elements exist
-        const rootElement = document.getElementById('root');
-        if (rootElement) {
-            updateDebug("✅ Root element found");
-        } else {
-            updateDebug("❌ Root element NOT found");
-        }
-        
-        // Function to load scripts sequentially
-        function loadScript(src, onLoad, onError) {
-            updateDebug(`Loading script: ${src}`);
-            const script = document.createElement('script');
-            script.src = src;
-            script.onload = function() {
-                updateDebug(`✅ Loaded: ${src}`);
-                if (onLoad) onLoad();
-            };
-            script.onerror = function() {
-                updateDebug(`❌ Failed to load: ${src}`);
-                if (onError) onError();
-            };
-            document.head.appendChild(script);
-        }
-        
-        // Load scripts in sequence
-        console.log("🟡 Starting to load external scripts...");
-        
-        // 1. Load Tailwind CSS
-        loadScript('https://cdn.tailwindcss.com', function() {
-            updateDebug("Tailwind CSS loaded");
-            
-            // 2. Load React 18
-            loadScript('https://unpkg.com/react@18/umd/react.production.min.js', function() {
-                updateDebug("React loaded");
-                console.log("React version:", React.version);
-                
-                // 3. Load ReactDOM 18
-                loadScript('https://unpkg.com/react-dom@18/umd/react-dom.production.min.js', function() {
-                    updateDebug("ReactDOM loaded");
-                    console.log("ReactDOM:", typeof ReactDOM);
-                    
-                    // 4. Load Babel
-                    loadScript('https://unpkg.com/@babel/standalone/babel.min.js', function() {
-                        updateDebug("Babel loaded");
-                        console.log("Babel:", typeof Babel);
-                        
-                        // 5. Load React Feather
-                        loadScript('https://unpkg.com/react-feather/dist/react-feather.js', function() {
-                            updateDebug("React Feather loaded");
-                            console.log("ReactFeather:", typeof ReactFeather);
-                            
-                            // 6. Finally load our app
-                            loadScript('./app.js', function() {
-                                updateDebug("✅ App.js loaded successfully!");
-                            }, function() {
-                                updateDebug("❌ FAILED to load app.js");
-                                
-                                // Try to load with different paths
-                                updateDebug("Trying app.js with different path...");
-                                loadScript('app.js', function() {
-                                    updateDebug("✅ App.js loaded with relative path!");
-                                }, function() {
-                                    updateDebug("❌ Still failed. Checking file existence...");
-                                    
-                                    // Try to fetch the file to see if it exists
-                                    fetch('app.js')
-                                        .then(response => {
-                                            if (response.ok) {
-                                                updateDebug("✅ app.js file exists but script loading failed");
-                                                return response.text();
-                                            } else {
-                                                updateDebug(`❌ app.js HTTP ${response.status}: ${response.statusText}`);
-                                                throw new Error('File not found');
-                                            }
-                                        })
-                                        .then(content => {
-                                            updateDebug(`File size: ${content.length} characters`);
-                                            updateDebug("First 100 chars: " + content.substring(0, 100));
-                                            
-                                            // Try to execute the code manually
-                                            try {
-                                                const transformedCode = Babel.transform(content, {
-                                                    presets: ['react']
-                                                }).code;
-                                                updateDebug("✅ Babel transform successful");
-                                                
-                                                // Execute the transformed code
-                                                eval(transformedCode);
-                                                updateDebug("✅ Code executed successfully!");
-                                            } catch (e) {
-                                                updateDebug(`❌ Execution error: ${e.message}`);
-                                                console.error("Execution error:", e);
-                                            }
-                                        })
-                                        .catch(error => {
-                                            updateDebug(`❌ Fetch error: ${error.message}`);
-                                            console.error("Fetch error:", error);
-                                        });
-                                });
-                            });
-                            
-                        }, function() {
-                            updateDebug("❌ Failed to load Feather Icons");
-                        });
-                    }, function() {
-                        updateDebug("❌ Failed to load Babel");
-                    });
-                }, function() {
-                    updateDebug("❌ Failed to load ReactDOM");
-                });
-            }, function() {
-                updateDebug("❌ Failed to load React");
-            });
-        }, function() {
-            updateDebug("❌ Failed to load Tailwind CSS");
-        });
-        
-        // Also check for any global errors
-        window.addEventListener('error', function(e) {
-            updateDebug(`❌ Global error: ${e.message}`);
-            console.error("Global error:", e);
-        });
-        
-        // Check if we're running on a server or file://
-        updateDebug(`Protocol: ${window.location.protocol}`);
-        updateDebug(`Host: ${window.location.host}`);
-        updateDebug(`Pathname: ${window.location.pathname}`);
-        
-        if (window.location.protocol === 'file:') {
-            updateDebug("⚠️ Running on file:// protocol - this may cause CORS issues");
-        }
-        
-    </script>
+    <!-- Load the React component -->
+    <script type="text/babel" src="./app.js"></script>
 </body>
 </html>
