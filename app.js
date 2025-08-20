@@ -263,7 +263,7 @@ const SynthesisLogic = () => {
           <h3 className="text-xl sm:text-2xl font-light text-white mb-2">SynthesisLogic</h3>
           <p className="text-sm font-light mb-4">Building tomorrow's products today</p>
           <div className="text-xs">
-            © 2025 SynthesisLogic. All rights reserved.
+            © 2025 SynthesisLogic. All rights reserved. v 1.0.0
           </div>
         </div>
       </footer>
