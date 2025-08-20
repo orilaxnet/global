@@ -121,7 +121,7 @@ const SynthesisLogic = () => {
               <div className="max-w-6xl mx-auto px-4 sm:px-6 py-20">
                   <div className="text-center">
                       <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light mb-6 tracking-tight">
-                          <span className="font-bold">Synthesis</span>Logic
+                          <span className="font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">Synthesis</span><span className="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text text-transparent">Logic</span>
                       </h1>
                       
                       <p className="text-lg sm:text-xl text-gray-300 mb-12 max-w-2xl mx-auto font-light leading-relaxed px-4">
@@ -153,9 +153,9 @@ const SynthesisLogic = () => {
                       {apps.map((app, index) => (
                           <div 
                               key={index}
-                              className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 group"
+                              className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 group flex flex-col"
                           >
-                              <div className="text-center">
+                              <div className="text-center flex-1 flex flex-col">
                                   <div className="mb-6 flex justify-center">
                                       <AppIcon app={app} />
                                   </div>
@@ -164,7 +164,7 @@ const SynthesisLogic = () => {
                                   <p className="text-gray-600 mb-4 font-light text-sm sm:text-base">{app.tagline}</p>
                                   <p className="text-sm text-gray-700 mb-6 leading-relaxed">{app.description}</p>
                                   
-                                  <div className="space-y-2 mb-8 text-left">
+                                  <div className="space-y-2 mb-8 text-left flex-1">
                                       {app.features.map((feature, idx) => (
                                           <div key={idx} className="flex items-center space-x-3 text-sm">
                                               <div className="w-1.5 h-1.5 bg-gray-400 rounded-full flex-shrink-0"></div>
@@ -191,14 +191,16 @@ const SynthesisLogic = () => {
                                       </div>
                                   </div>
 
-                                  <a 
-                                      href={app.appStoreUrl}
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                      className="inline-flex items-center justify-center w-full bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-xl transition-colors group-hover:scale-105 transform duration-300"
-                                  >
-                                      <span className="font-medium">Check on App Store</span>
-                                  </a>
+                                  <div className="mt-auto">
+                                      <a 
+                                          href={app.appStoreUrl}
+                                          target="_blank"
+                                          rel="noopener noreferrer"
+                                          className="inline-flex items-center justify-center w-full bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-xl transition-colors group-hover:scale-105 transform duration-300"
+                                      >
+                                          <span className="font-medium">Check on App Store</span>
+                                      </a>
+                                  </div>
                               </div>
                           </div>
                       ))}
@@ -292,7 +294,9 @@ const SynthesisLogic = () => {
           {/* Footer */}
           <footer className="bg-gray-900 text-gray-400 py-12">
               <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-                  <h3 className="text-xl sm:text-2xl font-light text-white mb-2">SynthesisLogic</h3>
+                  <h3 className="text-xl sm:text-2xl font-light mb-2">
+            <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent font-bold">Synthesis</span><span className="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text text-transparent">Logic</span>
+          </h3>
                   <p className="text-sm font-light mb-4">Building tomorrow's products today</p>
                   <div className="text-xs">
                       © 2025 SynthesisLogic. All rights reserved.
