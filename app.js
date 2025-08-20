@@ -1,5 +1,5 @@
-const { useState, useEffect } = React;
-const { ArrowRight, Download, Smartphone, Zap, Mail, ExternalLink, Check, Star } = lucide;
+import React, { useState } from 'react';
+import { ArrowRight, Download, Smartphone, Zap, Mail, ExternalLink, Check, Star } from 'lucide-react';
 
 const SynthesisLogic = () => {
   const apps = [
@@ -78,7 +78,7 @@ const SynthesisLogic = () => {
     <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-gray-900 text-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-20">
+        <div className="max-w-6xl mx-auto px-6 py-20">
           <div className="text-center">
             <div className="inline-flex items-center space-x-2 text-gray-400 mb-8">
               <Smartphone className="w-4 h-4" />
@@ -123,7 +123,7 @@ const SynthesisLogic = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {apps.map((app, index) => (
-              <div 
+                              <div 
                 key={index}
                 className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 group"
               >
