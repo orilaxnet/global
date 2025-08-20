@@ -133,9 +133,9 @@ const SynthesisLogic = () => {
   ];
 
   return (
-      <div className="min-h-screen bg-gray-900">
+      <div className="min-h-screen bg-white">
           {/* Header */}
-          <header className="bg-gray-900 text-white">
+          <header className="bg-black text-white">
               <div className="max-w-6xl mx-auto px-4 sm:px-6 py-20">
                   <div className="text-center">
                       <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light mb-6 tracking-tight">
@@ -158,11 +158,11 @@ const SynthesisLogic = () => {
           </header>
 
           {/* Apps Showcase */}
-          <section className="py-20 bg-gray-800">
+          <section className="py-20 bg-gray-50">
               <div className="max-w-6xl mx-auto px-4 sm:px-6">
                   <div className="text-center mb-12 sm:mb-16">
-                      <h2 className="text-3xl sm:text-4xl font-light text-white mb-4">Our Products</h2>
-                      <p className="text-base sm:text-lg text-gray-300 font-light px-4">
+                      <h2 className="text-3xl sm:text-4xl font-light text-gray-900 mb-4">Our Products</h2>
+                      <p className="text-base sm:text-lg text-gray-600 font-light px-4">
                           From concept to market - complete product solutions
                       </p>
                   </div>
@@ -171,22 +171,22 @@ const SynthesisLogic = () => {
                       {apps.map((app, index) => (
                           <div 
                               key={index}
-                              className="bg-gray-700 rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 group flex flex-col"
+                              className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 group flex flex-col"
                           >
                               <div className="text-center flex-1 flex flex-col">
                                   <div className="mb-6 flex justify-center">
                                       <AppIcon app={app} />
                                   </div>
                                   
-                                  <h3 className="text-xl sm:text-2xl font-medium mb-3 text-white">{app.name}</h3>
-                                  <p className="text-gray-300 mb-4 font-light text-sm sm:text-base">{app.tagline}</p>
-                                  <p className="text-sm text-gray-300 mb-6 leading-relaxed">{app.description}</p>
+                                  <h3 className="text-xl sm:text-2xl font-medium mb-3 text-gray-900">{app.name}</h3>
+                                  <p className="text-gray-600 mb-4 font-light text-sm sm:text-base">{app.tagline}</p>
+                                  <p className="text-sm text-gray-700 mb-6 leading-relaxed">{app.description}</p>
                                   
                                   <div className="space-y-2 mb-8 text-left flex-1">
                                       {app.features.map((feature, idx) => (
                                           <div key={idx} className="flex items-center space-x-3 text-sm">
                                               <div className="w-1.5 h-1.5 bg-gray-400 rounded-full flex-shrink-0"></div>
-                                              <span className="text-gray-300">{feature}</span>
+                                              <span className="text-gray-700">{feature}</span>
                                           </div>
                                       ))}
                                   </div>
@@ -194,7 +194,7 @@ const SynthesisLogic = () => {
                                   <div className="flex items-center justify-between mb-6">
                                       <div className="text-left">
                                           <div className="text-xs text-gray-500 mb-1">{app.category}</div>
-                                          <div className="font-medium text-white">{app.price}</div>
+                                          <div className="font-medium text-gray-900">{app.price}</div>
                                       </div>
                                       
                                       <div className="text-right">
@@ -214,7 +214,7 @@ const SynthesisLogic = () => {
                                           href={app.appStoreUrl}
                                           target="_blank"
                                           rel="noopener noreferrer"
-                                          className="inline-flex items-center justify-center w-full bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-xl transition-colors group-hover:scale-105 transform duration-300"
+                                          className="inline-flex items-center justify-center w-full bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-xl transition-colors group-hover:scale-105 transform duration-300"
                                       >
                                           <span className="font-medium">Check on App Store</span>
                                       </a>
@@ -227,48 +227,48 @@ const SynthesisLogic = () => {
           </section>
 
           {/* Philosophy Section */}
-          <section className="py-20 bg-gray-900">
+          <section className="py-20 bg-white">
               <div className="max-w-6xl mx-auto px-4 sm:px-6">
                   <div className="text-center mb-12 sm:mb-16">
-                      <h2 className="text-3xl sm:text-4xl font-light text-white mb-4">Our Approach</h2>
-                      <p className="text-base sm:text-lg text-gray-300 font-light max-w-2xl mx-auto px-4">
+                      <h2 className="text-3xl sm:text-4xl font-light text-gray-900 mb-4">Our Approach</h2>
+                      <p className="text-base sm:text-lg text-gray-600 font-light max-w-2xl mx-auto px-4">
                           From backend infrastructure to market strategy - we build complete solutions
                       </p>
                   </div>
                   
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
                       <div className="text-center group">
-                          <div className="w-12 h-12 bg-gray-600 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                          <div className="w-12 h-12 bg-black rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                               <div className="w-6 h-6 text-white">
                                   <Code />
                               </div>
                           </div>
-                          <h3 className="text-lg sm:text-xl font-medium mb-4 text-white">Engineering</h3>
-                          <p className="text-sm sm:text-base text-gray-300 leading-relaxed font-light px-2">
+                          <h3 className="text-lg sm:text-xl font-medium mb-4 text-gray-900">Engineering</h3>
+                          <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-light px-2">
                               Full-stack development from server architecture to user interfaces. Every layer optimized for performance.
                           </p>
                       </div>
 
                       <div className="text-center group">
-                          <div className="w-12 h-12 bg-gray-600 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                          <div className="w-12 h-12 bg-black rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                               <div className="w-6 h-6 text-white">
                                   <Lightbulb />
                               </div>
                           </div>
-                          <h3 className="text-lg sm:text-xl font-medium mb-4 text-white">Innovation</h3>
-                          <p className="text-sm sm:text-base text-gray-300 leading-relaxed font-light px-2">
+                          <h3 className="text-lg sm:text-xl font-medium mb-4 text-gray-900">Innovation</h3>
+                          <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-light px-2">
                               We don't just build products - we create new categories and solve problems others haven't identified yet.
                           </p>
                       </div>
 
                       <div className="text-center group">
-                          <div className="w-12 h-12 bg-gray-600 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                          <div className="w-12 h-12 bg-black rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                               <div className="w-6 h-6 text-white">
                                   <TrendingUp />
                               </div>
                           </div>
-                          <h3 className="text-lg sm:text-xl font-medium mb-4 text-white">Marketing</h3>
-                          <p className="text-sm sm:text-base text-gray-300 leading-relaxed font-light px-2">
+                          <h3 className="text-lg sm:text-xl font-medium mb-4 text-gray-900">Marketing</h3>
+                          <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-light px-2">
                               Strategic market entry and growth. We understand how to position and scale new products effectively.
                           </p>
                       </div>
@@ -277,23 +277,23 @@ const SynthesisLogic = () => {
           </section>
 
           {/* Contact Section */}
-          <section className="py-20 bg-gray-800">
+          <section className="py-20 bg-gray-50">
               <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-                  <div className="bg-gray-700 rounded-3xl p-8 sm:p-12 shadow-lg">
-                      <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gray-600 rounded-2xl flex items-center justify-center mx-auto mb-6 sm:mb-8">
+                  <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-lg">
+                      <div className="w-16 h-16 sm:w-20 sm:h-20 bg-black rounded-2xl flex items-center justify-center mx-auto mb-6 sm:mb-8">
                           <div className="w-8 h-8 sm:w-10 sm:h-10 text-white">
                               <Mail />
                           </div>
                       </div>
                       
-                      <h2 className="text-3xl sm:text-4xl font-light text-white mb-4 sm:mb-6">Let's Connect</h2>
-                      <p className="text-base sm:text-lg text-gray-300 mb-6 sm:mb-8 font-light max-w-2xl mx-auto px-4">
+                      <h2 className="text-3xl sm:text-4xl font-light text-gray-900 mb-4 sm:mb-6">Let's Connect</h2>
+                      <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 font-light max-w-2xl mx-auto px-4">
                           Have an idea? Want to collaborate? We'd love to hear from you.
                       </p>
                       
                       <div className="space-y-2 sm:space-y-3 mb-8 sm:mb-10">
-                          <div className="text-gray-300 text-sm sm:text-base">
-                              <a href="mailto:hello@synthesislogic.com" className="text-white hover:text-gray-300 transition-colors break-all">
+                          <div className="text-gray-700 text-sm sm:text-base">
+                              <a href="mailto:hello@synthesislogic.com" className="text-gray-900 hover:text-gray-600 transition-colors break-all">
                                   hello@synthesislogic.com
                               </a>
                           </div>
@@ -301,7 +301,7 @@ const SynthesisLogic = () => {
 
                       <a 
                           href="mailto:hello@synthesislogic.com"
-                          className="inline-flex items-center space-x-3 bg-gray-600 hover:bg-gray-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl transition-colors group text-sm sm:text-base"
+                          className="inline-flex items-center space-x-3 bg-black hover:bg-gray-800 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl transition-colors group text-sm sm:text-base"
                       >
                           <div className="w-5 h-5">
                               <Mail />
@@ -316,7 +316,7 @@ const SynthesisLogic = () => {
           </section>
 
           {/* Footer */}
-          <footer className="bg-gray-900 text-gray-400 py-12">
+          <footer className="bg-black text-gray-400 py-12">
               <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
                   <h3 className="text-xl sm:text-2xl font-light mb-2">
             <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent font-bold">Synthesis</span><span className="text-white">Logic</span>
