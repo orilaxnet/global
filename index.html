@@ -88,6 +88,9 @@
                 debugEl.innerHTML += '<br>' + message;
             }
             console.log("🔍 DEBUG:", message);
+            
+            // Also update title to show current status
+            document.title = `Debug: ${message}`;
         }
         
         updateDebug("HTML loaded");
@@ -123,13 +126,13 @@
         loadScript('https://cdn.tailwindcss.com', function() {
             updateDebug("Tailwind CSS loaded");
             
-            // 2. Load React
-            loadScript('https://unpkg.com/react@17/umd/react.production.min.js', function() {
+            // 2. Load React 18
+            loadScript('https://unpkg.com/react@18/umd/react.production.min.js', function() {
                 updateDebug("React loaded");
                 console.log("React version:", React.version);
                 
-                // 3. Load ReactDOM
-                loadScript('https://unpkg.com/react-dom@17/umd/react-dom.production.min.js', function() {
+                // 3. Load ReactDOM 18
+                loadScript('https://unpkg.com/react-dom@18/umd/react-dom.production.min.js', function() {
                     updateDebug("ReactDOM loaded");
                     console.log("ReactDOM:", typeof ReactDOM);
                     
@@ -194,7 +197,7 @@
                             });
                             
                         }, function() {
-                            updateDebug("❌ Failed to load React Feather");
+                            updateDebug("❌ Failed to load Feather Icons");
                         });
                     }, function() {
                         updateDebug("❌ Failed to load Babel");

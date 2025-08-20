@@ -2,8 +2,10 @@ console.log("🟢 app.js started loading");
 
 // Check if React and ReactDOM are available
 console.log("React available:", typeof React !== 'undefined' ? '✅' : '❌');
+console.log("React version:", typeof React !== 'undefined' ? React.version : 'Not loaded');
 console.log("ReactDOM available:", typeof ReactDOM !== 'undefined' ? '✅' : '❌');
 console.log("feather available:", typeof feather !== 'undefined' ? '✅' : '❌');
+console.log("feather version:", typeof feather !== 'undefined' ? (feather.version || 'version not available') : 'Not loaded');
 
 if (typeof React === 'undefined') {
     console.error("❌ React is not loaded!");
@@ -48,6 +50,13 @@ let ArrowRight, Download, Smartphone, Zap, Mail, ExternalLink, Check, Star;
 
 try {
     if (typeof feather !== 'undefined') {
+        console.log("🔍 Feather object properties:", Object.keys(feather));
+        console.log("🔍 Available feather methods:", {
+            replace: typeof feather.replace,
+            icons: typeof feather.icons,
+            toSvg: typeof feather.toSvg
+        });
+        
         ArrowRight = createFeatherIcon('arrow-right');
         Download = createFeatherIcon('download');
         Smartphone = createFeatherIcon('smartphone');
@@ -414,9 +423,27 @@ try {
         console.log("✅ Using React 18 createRoot API");
         const root = ReactDOM.createRoot(rootElement);
         root.render(React.createElement(SynthesisLogic));
+        
+        // Replace icons after render
+        setTimeout(() => {
+            if (typeof feather !== 'undefined') {
+                console.log("🔄 Running feather.replace() after render...");
+                feather.replace();
+                console.log("✅ feather.replace() completed");
+            }
+        }, 100);
     } else {
         console.log("✅ Using React 17 render API (fallback)");
         ReactDOM.render(React.createElement(SynthesisLogic), rootElement);
+        
+        // Replace icons after render
+        setTimeout(() => {
+            if (typeof feather !== 'undefined') {
+                console.log("🔄 Running feather.replace() after render...");
+                feather.replace();
+                console.log("✅ feather.replace() completed");
+            }
+        }, 100);
     }
     
     console.log("🟢 ✅ Component rendered successfully!");
