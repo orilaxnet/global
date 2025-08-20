@@ -42,6 +42,23 @@ const Star = () => (
   </svg>
 );
 
+const AppIcon = ({ app }) => (
+  <div className="w-20 h-20 rounded-2xl overflow-hidden shadow-lg bg-gray-100">
+    <img 
+      src={app.iconPath} 
+      alt={`${app.name} app icon`}
+      className="w-full h-full object-cover"
+      onError={(e) => {
+        e.target.style.display = 'none';
+        e.target.nextSibling.style.display = 'flex';
+      }}
+    />
+    <div className={`w-full h-full ${app.iconBg} flex items-center justify-center`} style={{display: 'none'}}>
+      <span className="text-white font-bold text-lg">{app.iconText}</span>
+    </div>
+  </div>
+);
+
 const SynthesisLogic = () => {
   const apps = [
       {
@@ -58,7 +75,8 @@ const SynthesisLogic = () => {
           ],
           appStoreUrl: "https://apps.apple.com/us/app/aitist/id6745760049",
           iconBg: "bg-gradient-to-br from-purple-500 to-pink-500",
-          iconText: "AI"
+          iconText: "AI",
+          iconPath: "aitist.webp"
       },
       {
           name: "BurnTracker",
@@ -74,7 +92,8 @@ const SynthesisLogic = () => {
           ],
           appStoreUrl: "https://apps.apple.com/us/app/burntracker-fitness-calorie/id6745753122",
           iconBg: "bg-gradient-to-br from-green-500 to-emerald-500",
-          iconText: "BT"
+          iconText: "BT",
+          iconPath: "burntracker.webp"
       },
       {
           name: "SketchGenius", 
@@ -90,7 +109,8 @@ const SynthesisLogic = () => {
           ],
           appStoreUrl: "https://apps.apple.com/us/app/sketchgenius/id6748335765",
           iconBg: "bg-gradient-to-br from-blue-500 to-indigo-500",
-          iconText: "SG"
+          iconText: "SG",
+          iconPath: "sketchgenius.webp"
       }
   ];
 
@@ -137,9 +157,7 @@ const SynthesisLogic = () => {
                           >
                               <div className="text-center">
                                   <div className="mb-6 flex justify-center">
-                                      <div className={`w-20 h-20 rounded-2xl ${app.iconBg} flex items-center justify-center shadow-lg`}>
-                                          <span className="text-white font-bold text-lg">{app.iconText}</span>
-                                      </div>
+                                      <AppIcon app={app} />
                                   </div>
                                   
                                   <h3 className="text-xl sm:text-2xl font-medium mb-3 text-gray-900">{app.name}</h3>
@@ -177,15 +195,9 @@ const SynthesisLogic = () => {
                                       href={app.appStoreUrl}
                                       target="_blank"
                                       rel="noopener noreferrer"
-                                      className="inline-flex items-center justify-center w-full space-x-2 bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-xl transition-colors group-hover:scale-105 transform duration-300"
+                                      className="inline-flex items-center justify-center w-full bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-xl transition-colors group-hover:scale-105 transform duration-300"
                                   >
-                                      <div className="w-4 h-4">
-                                          <Download />
-                                      </div>
                                       <span className="font-medium">Check on App Store</span>
-                                      <div className="w-4 h-4">
-                                          <ExternalLink />
-                                      </div>
                                   </a>
                               </div>
                           </div>
