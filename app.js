@@ -62,21 +62,21 @@ const AppIcon = ({ app }) => (
 const SynthesisLogic = () => {
   const apps = [
       {
-          name: "AItist",
-          tagline: "AI: Any Photo to Any Style",
-          description: "Transform ordinary photos into extraordinary artwork in just 15 seconds with 34 unique artistic styles.",
-          category: "Photo & Video",
+          name: "SketchGenius", 
+          tagline: "Draw, Write, Create with AI",
+          description: "Turn simple drawings into stunning AI art with 130+ professional styles and Apple Pencil support.",
+          category: "Graphics & Design",
           price: "Free",
           features: [
-              "15-second transformations",
-              "34 artistic styles", 
-              "Credits never expire",
-              "Social media ready"
+              "130+ AI styles",
+              "Apple Pencil support",
+              "Text overlays", 
+              "Photo collages"
           ],
-          appStoreUrl: "https://apps.apple.com/us/app/aitist/id6745760049",
-          iconBg: "bg-gradient-to-br from-purple-500 to-pink-500",
-          iconText: "AI",
-          iconPath: "aitist.webp"
+          appStoreUrl: "https://apps.apple.com/us/app/sketchgenius/id6748335765",
+          iconBg: "bg-gradient-to-br from-blue-500 to-indigo-500",
+          iconText: "SG",
+          iconPath: "sketchgenius.webp"
       },
       {
           name: "BurnTracker",
@@ -96,21 +96,21 @@ const SynthesisLogic = () => {
           iconPath: "burntracker.webp"
       },
       {
-          name: "SketchGenius", 
-          tagline: "Draw, Write, Create with AI",
-          description: "Turn simple drawings into stunning AI art with 130+ professional styles and Apple Pencil support.",
-          category: "Graphics & Design",
+          name: "AItist",
+          tagline: "AI: Any Photo to Any Style",
+          description: "Transform ordinary photos into extraordinary artwork in just 15 seconds with 34 unique artistic styles.",
+          category: "Photo & Video",
           price: "Free",
           features: [
-              "130+ AI styles",
-              "Apple Pencil support",
-              "Text overlays", 
-              "Photo collages"
+              "15-second transformations",
+              "34 artistic styles", 
+              "Credits never expire",
+              "Social media ready"
           ],
-          appStoreUrl: "https://apps.apple.com/us/app/sketchgenius/id6748335765",
-          iconBg: "bg-gradient-to-br from-blue-500 to-indigo-500",
-          iconText: "SG",
-          iconPath: "sketchgenius.webp"
+          appStoreUrl: "https://apps.apple.com/us/app/aitist/id6745760049",
+          iconBg: "bg-gradient-to-br from-purple-500 to-pink-500",
+          iconText: "AI",
+          iconPath: "aitist.webp"
       }
   ];
 
@@ -121,7 +121,7 @@ const SynthesisLogic = () => {
               <div className="max-w-6xl mx-auto px-4 sm:px-6 py-20">
                   <div className="text-center">
                       <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light mb-6 tracking-tight">
-                          <span className="font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">Synthesis</span><span className="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text text-transparent">Logic</span>
+                          <span className="font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">Synthesis</span><span className="text-white">Logic</span>
                       </h1>
                       
                       <p className="text-lg sm:text-xl text-gray-300 mb-12 max-w-2xl mx-auto font-light leading-relaxed px-4">
@@ -295,7 +295,7 @@ const SynthesisLogic = () => {
           <footer className="bg-gray-900 text-gray-400 py-12">
               <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
                   <h3 className="text-xl sm:text-2xl font-light mb-2">
-            <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent font-bold">Synthesis</span><span className="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text text-transparent">Logic</span>
+            <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent font-bold">Synthesis</span><span className="text-white">Logic</span>
           </h3>
                   <p className="text-sm font-light mb-4">Building tomorrow's products today</p>
                   <div className="text-xs">
