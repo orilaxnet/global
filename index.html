@@ -5,22 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SynthesisLogic - Digital Innovation Studio</title>
     <meta name="description" content="We create new products and bring them to market with intelligent engineering and strategic marketing">
-    <meta name="keywords" content="product development, full-stack development, mobile apps, innovation, marketing">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://synthesislogic.com/">
-    <meta property="og:title" content="SynthesisLogic - Digital Innovation Studio">
-    <meta property="og:description" content="We create new products and bring them to market with intelligent engineering and strategic marketing">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://synthesislogic.com/">
-    <meta property="twitter:title" content="SynthesisLogic - Digital Innovation Studio">
-    <meta property="twitter:description" content="We create new products and bring them to market with intelligent engineering and strategic marketing">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="./favicon.ico">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -38,41 +22,10 @@
             padding: 0;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
         }
-        
-        /* Loading animation */
-        .loading {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: #111827;
-            color: white;
-        }
-        
-        .spinner {
-            width: 40px;
-            height: 40px;
-            border: 4px solid #374151;
-            border-top: 4px solid #ffffff;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-        
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
     </style>
 </head>
 <body>
-    <div id="root">
-        <div class="loading">
-            <div class="spinner"></div>
-            <p style="margin-left: 20px;">Loading SynthesisLogic...</p>
-        </div>
-    </div>
-
-    <!-- Load the React component -->
+    <div id="root"></div>
     <script type="text/babel" src="./app.js"></script>
 </body>
 </html>
