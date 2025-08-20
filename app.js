@@ -1,25 +1,38 @@
+/*!
+ * SynthesisLogic - Product Development Platform
+ * 
+ * Main application component showcasing our product portfolio
+ * Built with React and modern web technologies
+ * 
+ * @author SynthesisLogic Team
+ * @version 1.0.0
+ * @copyright 2025 SynthesisLogic. All rights reserved.
+ * @description Interactive showcase of AI-powered applications including AItist, 
+ *              BurnTracker, and SketchGenius with responsive design and App Store integration
+ */
+
 // React Icons - SVG Components
 const ChevronRight = () => (
   <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-full h-full">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="m9 18 6-6-6-6" />
   </svg>
 );
 
 const Download = () => (
   <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-full h-full">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4m4-5 5 5 5-5m-5 5V3" />
   </svg>
 );
 
 const Mail = () => (
   <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-full h-full">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm0 4 8 5 8-5" />
   </svg>
 );
 
 const ExternalLink = () => (
   <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-full h-full">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6m4-3h6v6m-11 5L21 3" />
   </svg>
 );
 
@@ -169,7 +182,7 @@ const SynthesisLogic = () => {
                                       <div className="w-4 h-4">
                                           <Download />
                                       </div>
-                                      <span className="font-medium">Download</span>
+                                      <span className="font-medium">Check on App Store</span>
                                       <div className="w-4 h-4">
                                           <ExternalLink />
                                       </div>
