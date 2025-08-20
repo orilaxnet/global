@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SketchGenius Partner Program</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 50%, #eff6ff 100%);
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #059669, #2563eb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .gradient-btn {
+            background: linear-gradient(to right, #059669, #2563eb);
+        }
+        .gradient-btn:hover {
+            background: linear-gradient(to right, #047857, #1d4ed8);
+        }
+        .gradient-hero {
+            background: linear-gradient(to right, #059669, #2563eb);
+        }
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        .hover-scale-sm:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen">
+    <!-- Header -->
+    <div class="bg-white border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-gray-900">SketchGenius</div>
+                <div class="text-sm text-gray-600">Partner Program</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-flex items-center px-4 py-2 rounded-full bg-green-100 text-green-700 text-sm font-medium mb-8 border border-green-200">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                </svg>
+                Partner Program
+            </div>
+            
+            <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+                Earn <span class="gradient-text">$1 per subscriber</span>
+                <br />you refer
+            </h1>
+            
+            <p class="text-xl text-gray-600 mb-10 max-w-3xl mx-auto">
+                Join our Partner Program with unique links, reliable tracking, and monthly payouts. 
+                Help creators discover SketchGenius and earn money doing it.
+            </p>
+            
+            <button onclick="scrollToApply()" class="inline-flex items-center px-8 py-4 gradient-btn text-white rounded-2xl text-lg font-semibold hover-scale transition-all duration-200 shadow-xl">
+                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+                Apply Now
+            </button>
+        </div>
+    </div>
+
+    <!-- How It Works -->
+    <div class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">How it works</h2>
+                <p class="text-lg text-gray-600">Simple process to start earning</p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 gradient-hero text-white rounded-full flex items-center justify-center text-2xl font-bold">
+                        1
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Apply</h3>
+                    <p class="text-gray-600">Email us to join (approval required)</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 gradient-hero text-white rounded-full flex items-center justify-center text-2xl font-bold">
+                        2
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Get your link</h3>
+                    <p class="text-gray-600">Receive unique campaign link & offer code</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 gradient-hero text-white rounded-full flex items-center justify-center text-2xl font-bold">
+                        3
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Share</h3>
+                    <p class="text-gray-600">Promote to your audience</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 gradient-hero text-white rounded-full flex items-center justify-center text-2xl font-bold">
+                        4
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Earn</h3>
+                    <p class="text-gray-600">Get $1 for each subscriber</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Benefits -->
+    <div class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">What you get</h2>
+                <p class="text-lg text-gray-600">Everything you need to succeed as our partner</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 text-center">
+                    <svg class="w-12 h-12 mx-auto mb-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+                    </svg>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">$1 per subscriber</h3>
+                    <p class="text-gray-600">Earn for each new subscriber you refer</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 text-center">
+                    <svg class="w-12 h-12 mx-auto mb-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+                    </svg>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Unique tracking link</h3>
+                    <p class="text-gray-600">App Store campaign parameters included</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 text-center">
+                    <svg class="w-12 h-12 mx-auto mb-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                    </svg>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Real-time reports</h3>
+                    <p class="text-gray-600">Track your performance and earnings</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Earnings & Payouts -->
+    <div class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="gradient-hero rounded-3xl p-12 text-white text-center">
+                <svg class="w-16 h-16 mx-auto mb-6 text-white opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                </svg>
+                <h2 class="text-3xl font-bold mb-4">Weekly Payouts</h2>
+                <div class="grid md:grid-cols-4 gap-6 mt-8">
+                    <div>
+                        <div class="text-2xl font-bold mb-2">$25</div>
+                        <p class="text-white opacity-90">Minimum payout</p>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold mb-2">Weekly</div>
+                        <p class="text-white opacity-90">Regular payouts</p>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold mb-2">Daily</div>
+                        <p class="text-white opacity-90">Over $500</p>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold mb-2">PayPal</div>
+                        <p class="text-white opacity-90">Easy payments</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Email Template -->
+    <div id="apply-form" class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Apply now</h2>
+                <p class="text-lg text-gray-600">Copy and send this email template to get started</p>
+            </div>
+            
+            <div class="bg-white rounded-3xl p-8 shadow-lg">
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Email Template</h3>
+                    <div class="mb-4">
+                        <p class="text-gray-700 mb-2"><strong>1) Creator → You (application)</strong></p>
+                        <p class="text-gray-700 mb-2"><strong>Subject:</strong> Join SketchGenius Partner Program</p>
+                        <p class="text-gray-700 mb-2"><strong>Body:</strong></p>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 font-mono text-sm leading-relaxed">
+                        <pre id="email-content">```
+Hi SketchGenius team,
+I'd like to join your Partner Program.
+
+Name:
+Channel links:
+Audience size & top countries:
+Preferred payout method (PayPal email):
+How I plan to promote:
+
+Thanks!
+```</pre>
+                    </div>
+                    
+                    <button onclick="copyTemplate()" id="copy-btn" class="absolute top-4 right-4 px-4 py-2 bg-gray-600 text-white rounded-lg text-sm font-medium hover:bg-gray-700 transition-colors">
+                        Copy Template
+                    </button>
+                </div>
+                
+                <div class="mt-8 text-center">
+                    <a href="mailto:marketing@fluentafast.com?subject=Join SketchGenius Partner Program&body=Hi SketchGenius team,%0D%0AI'd like to join your Partner Program.%0D%0A%0D%0AName:%0D%0AChannel links:%0D%0AAudience size & top countries:%0D%0APreferred payout method (PayPal email):%0D%0AHow I plan to promote:%0D%0A%0D%0AThanks!" class="inline-flex items-center px-8 py-4 gradient-btn text-white rounded-xl text-lg font-semibold hover-scale transition-all duration-200 shadow-lg">
+                        <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                        Send Email Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms -->
+    <div class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gray-50 rounded-3xl p-8">
+                <div class="flex items-center mb-6">
+                    <svg class="w-8 h-8 text-gray-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                    </svg>
+                    <h3 class="text-2xl font-bold text-gray-900">Program Terms</h3>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6 text-sm text-gray-600">
+                    <div>
+                        <div class="flex items-start mb-3">
+                            <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <div>
+                                <strong>Reward:</strong> $1 for each new subscriber attributed to your link
+                            </div>
+                        </div>
+                        <div class="flex items-start mb-3">
+                            <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <div>
+                                <strong>Attribution:</strong> Up to 30 days from first install
+                            </div>
+                        </div>
+                        <div class="flex items-start mb-3">
+                            <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <div>
+                                <strong>Payments:</strong> Weekly, minimum $25 payout via PayPal (Daily for earnings over $500)
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="flex items-start mb-3">
+                            <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <div>
+                                <strong>Exclusions:</strong> Refunds, chargebacks, fraud excluded
+                            </div>
+                        </div>
+                        <div class="flex items-start mb-3">
+                            <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <div>
+                                <strong>Conduct:</strong> No fake traffic or misleading ads
+                            </div>
+                        </div>
+                        <div class="flex items-start mb-3">
+                            <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <div>
+                                <strong>Changes:</strong> Terms may change with email notice
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="py-12 bg-gray-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="text-white mb-4">
+                <div class="text-2xl font-bold mb-2">SketchGenius</div>
+                <p class="text-gray-400">Partner Program</p>
+            </div>
+            
+            <div class="text-gray-400 text-sm">
+                Questions? Email us at <strong class="text-white">marketing@fluentafast.com</strong>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function scrollToApply() {
+            document.getElementById('apply-form').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function copyTemplate() {
+            const emailContent = `Hi SketchGenius team,
+I'd like to join your Partner Program.
+
+Name:
+Channel links:
+Audience size & top countries:
+Preferred payout method (PayPal email):
+How I plan to promote:
+
+Thanks!`;
+            
+            navigator.clipboard.writeText(emailContent).then(function() {
+                const button = document.getElementById('copy-btn');
+                const originalText = button.textContent;
+                button.textContent = 'Copied!';
+                button.className = button.className.replace('bg-gray-600', 'bg-green-600');
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.className = button.className.replace('bg-green-600', 'bg-gray-600');
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>

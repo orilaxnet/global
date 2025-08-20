@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BurnTracker Support</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: #1E3A8A;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+            margin-bottom: 2rem;
+        }
+        
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .logo-icon {
+            background-color: #FF6B00;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+        }
+        
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        
+        section {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: white;
+            font-size: 2.2rem;
+            margin: 0;
+        }
+        
+        h2 {
+            color: #1E3A8A;
+            border-bottom: 2px solid #FF6B00;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        
+        h3 {
+            color: #333;
+            margin-top: 1.5rem;
+        }
+        
+        a {
+            color: #FF6B00;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .faq-item {
+            margin-bottom: 1.5rem;
+        }
+        
+        .faq-question {
+            font-weight: bold;
+            color: #1E3A8A;
+            margin-bottom: 0.5rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .privacy-policy {
+            font-size: 0.9rem;
+            background-color: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2ZM16 16H8V8H10V14H16V16Z" fill="white"/>
+                    </svg>
+                </div>
+                <div class="logo-text">BurnTracker</div>
+            </div>
+            <h1>Support Center</h1>
+        </header>
+        
+        <section id="getting-started">
+            <h2>Getting Started</h2>
+            <p>Welcome to BurnTracker, your all-in-one fitness and calorie tracking app. Here's how to get the most out of your experience:</p>
+            
+            <h3>Setting Up Your Profile</h3>
+            <p>To get accurate calorie calculations, please complete your profile with your height, weight, age, and gender. This helps our app provide personalized metrics for your workouts.</p>
+            
+            <h3>Tracking Your First Workout</h3>
+            <p>Starting a workout is simple:</p>
+            <ol>
+                <li>From the home screen, select your activity type</li>
+                <li>Tap "Start" to begin tracking</li>
+                <li>When finished, tap "End" to complete your workout</li>
+                <li>Review your stats and save your workout</li>
+            </ol>
+            
+            <h3>Apple Health Integration</h3>
+            <p>BurnTracker can sync with Apple Health to provide a comprehensive view of your fitness data. To enable this feature, go to Profile > Settings > Health Integration.</p>
+        </section>
+        
+        <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">How accurate are the calorie calculations?</div>
+                <div class="faq-answer">BurnTracker uses industry-standard MET (Metabolic Equivalent of Task) values combined with your personal profile data to calculate calories burned. For most activities, our calculations are within 10-15% accuracy compared to laboratory measurements.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Why does the app need my location?</div>
+                <div class="faq-answer">Location access is only required for tracking distance, pace, and route during outdoor activities like running, walking, or cycling. You can still use the app without location permissions, but distance tracking will be less accurate.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Is my data stored in the cloud?</div>
+                <div class="faq-answer">No. BurnTracker stores all your workout data locally on your device. We do not upload or store your personal information on any servers.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">How do I delete my data?</div>
+                <div class="faq-answer">You can delete individual workouts by swiping left on any workout in your history. To completely remove all app data, you can uninstall the app from your device, as all data is stored locally.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Can I export my workout data?</div>
+                <div class="faq-answer">While the app doesn't support direct export, if you enable Apple Health integration, your workout data will be available through the Health app.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">How can I improve battery life while tracking?</div>
+                <div class="faq-answer">For long workouts, you can reduce battery usage by:
+                <ul>
+                    <li>Turning off the screen during workouts (tracking continues in the background)</li>
+                    <li>Closing other apps running in the background</li>
+                    <li>Starting with a fully charged device for long workouts</li>
+                </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="troubleshooting">
+            <h2>Troubleshooting</h2>
+            
+            <h3>GPS Accuracy Issues</h3>
+            <p>If you're experiencing inaccurate GPS tracking:</p>
+            <ul>
+                <li>Ensure Location Services is set to "Always" or "While Using" for BurnTracker</li>
+                <li>Wait a few seconds after starting your workout for GPS to calibrate</li>
+                <li>Try to start workouts in open areas, away from tall buildings</li>
+                <li>Check if your device has the latest iOS update</li>
+            </ul>
+            
+            <h3>App Crashing</h3>
+            <p>If the app crashes or freezes:</p>
+            <ul>
+                <li>Force close the app and restart it</li>
+                <li>Restart your device</li>
+                <li>Ensure you have the latest version of BurnTracker installed</li>
+                <li>If problems persist, contact our support team with details about your device and iOS version</li>
+            </ul>
+            
+            <h3>HealthKit Sync Problems</h3>
+            <p>If workouts aren't syncing with Apple Health:</p>
+            <ul>
+                <li>Check that you've granted all necessary permissions in both BurnTracker and the Health app</li>
+                <li>Go to iPhone Settings > Privacy & Security > Health > BurnTracker and ensure all categories are enabled</li>
+                <li>Try toggling the Health integration off and on again in the app settings</li>
+            </ul>
+        </section>
+        
+        <section id="contact">
+            <h2>Contact Support</h2>
+            <p>Need more help? Our support team is here for you.</p>
+            
+            <p>For any questions or support requests, please email us at: <a href="mailto:BurnTrackersupport@fluentafast.com">BurnTrackerSupport@fluentafast.com</a></p>
+            
+            <p>When contacting support, please include:</p>
+            <ul>
+                <li>A detailed description of your issue or question</li>
+                <li>Your device model (e.g., iPhone 15 Pro)</li>
+                <li>Your iOS version (e.g., iOS 18.1)</li>
+                <li>Any relevant screenshots if applicable</li>
+            </ul>
+            
+            <p>We aim to respond to all support requests within 24-48 hours.</p>
+        </section>
+        
+        <div class="privacy-policy">
+            <h3>Privacy Policy</h3>
+            <p>BurnTracker is committed to protecting your privacy. Our app stores all your workout data locally on your device and does not share your information with third parties.</p>
+            <p>For our complete privacy policy, please visit: <a href="https://orilaxnet.github.io/BurnTracker/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        
+        <footer>
+            <p>&copy; 2025 BurnTracker. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
