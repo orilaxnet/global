@@ -3,7 +3,7 @@ console.log("🟢 app.js started loading");
 // Check if React and ReactDOM are available
 console.log("React available:", typeof React !== 'undefined' ? '✅' : '❌');
 console.log("ReactDOM available:", typeof ReactDOM !== 'undefined' ? '✅' : '❌');
-console.log("ReactFeather available:", typeof ReactFeather !== 'undefined' ? '✅' : '❌');
+console.log("feather available:", typeof feather !== 'undefined' ? '✅' : '❌');
 
 if (typeof React === 'undefined') {
     console.error("❌ React is not loaded!");
@@ -17,24 +17,54 @@ if (typeof ReactDOM === 'undefined') {
 
 console.log("🟡 Destructuring React hooks...");
 const { useState, useEffect } = React;
+const { useRef } = React;
 console.log("useState:", typeof useState);
 console.log("useEffect:", typeof useEffect);
 
-console.log("🟡 Destructuring React Feather icons...");
+console.log("🟡 Creating custom icon components from Feather...");
+
+// Create React components from Feather icons
+const createFeatherIcon = (iconName) => {
+    return ({ className = "w-4 h-4", ...props }) => {
+        const iconRef = React.useRef(null);
+        
+        React.useEffect(() => {
+            if (iconRef.current && typeof feather !== 'undefined') {
+                iconRef.current.setAttribute('data-feather', iconName);
+                feather.replace();
+            }
+        }, []);
+        
+        return React.createElement('i', {
+            ref: iconRef,
+            className,
+            'data-feather': iconName,
+            ...props
+        });
+    };
+};
+
 let ArrowRight, Download, Smartphone, Zap, Mail, ExternalLink, Check, Star;
 
 try {
-    if (typeof ReactFeather !== 'undefined') {
-        ({ ArrowRight, Download, Smartphone, Zap, Mail, ExternalLink, Check, Star } = ReactFeather);
-        console.log("✅ React Feather icons destructured successfully");
+    if (typeof feather !== 'undefined') {
+        ArrowRight = createFeatherIcon('arrow-right');
+        Download = createFeatherIcon('download');
+        Smartphone = createFeatherIcon('smartphone');
+        Zap = createFeatherIcon('zap');
+        Mail = createFeatherIcon('mail');
+        ExternalLink = createFeatherIcon('external-link');
+        Check = createFeatherIcon('check');
+        Star = createFeatherIcon('star');
+        console.log("✅ Feather icon components created successfully");
     } else {
-        console.warn("⚠️ ReactFeather not available, using fallback");
+        console.warn("⚠️ Feather not available, using fallback");
         // Fallback icon component
         const FallbackIcon = ({ className }) => React.createElement('div', { className }, '🔗');
         ArrowRight = Download = Smartphone = Zap = Mail = ExternalLink = Check = Star = FallbackIcon;
     }
 } catch (error) {
-    console.error("❌ Error destructuring React Feather icons:", error);
+    console.error("❌ Error creating Feather icon components:", error);
     // Fallback icon component
     const FallbackIcon = ({ className }) => React.createElement('div', { className }, '🔗');
     ArrowRight = Download = Smartphone = Zap = Mail = ExternalLink = Check = Star = FallbackIcon;
