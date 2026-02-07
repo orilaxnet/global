@@ -1,0 +1,73 @@
+# SketchGenius
+
+> SketchGenius is an iOS app that transforms hand-drawn sketches into AI-generated artwork. Users draw on a digital canvas, choose an art style, and AI generates polished digital art from their sketch in real-time.
+
+## About
+
+SketchGenius is developed by SynthesisLogic. It is available on the Apple App Store for iPhone and iPad, requiring iOS 18.4 or later. The app is free to download with daily free credits for AI generation.
+
+App Store: https://apps.apple.com/app/id6748335765
+Website: https://synthesislogic.com/SketchGenius/
+Support: https://synthesislogic.com/SketchGenius/support.html
+Privacy Policy: https://synthesislogic.com/SketchGenius/privacy-policy.html
+Terms of Service: https://synthesislogic.com/SketchGenius/terms-of-service.html
+
+## How It Works
+
+1. **Draw**: Use the canvas with Apple Pencil or finger. Add text and image layers.
+2. **Choose Style**: Select from multiple art styles (digital art, illustrations, etc.).
+3. **Generate**: AI transforms the sketch into artwork with real-time streaming preview.
+
+## Key Features
+
+- Canvas drawing with full Apple Pencil support (pressure, tilt)
+- Multiple AI art styles for different visual aesthetics
+- Real-time generation with live streaming preview (Server-Sent Events)
+- Text and image overlay with move, scale, and rotate gestures
+- Custom undo/redo system across all canvas elements
+- Save generated artwork to photo library
+- In-app library for all generated images
+- No account required (automatic UUID-based authentication)
+
+## Pricing
+
+- **Free**: Daily free credits, all art styles, full canvas tools
+- **Monthly Light Plan**: $3.99/month — Pro status, 25 credits, no watermarks, HD quality
+- **Plus Pack**: $9.99 one-time — 100 credits, never expires
+- **Premium Pack**: $49.99 one-time — 270 credits, never expires
+
+## Technical Details
+
+- Platform: iOS (iPhone and iPad)
+- Minimum OS: iOS 18.4+
+- Frameworks: SwiftUI, PencilKit, StoreKit 2
+- No external dependencies — built entirely with native Apple frameworks
+- Bundle ID: orilax.belendtextsimages
+- App Store ID: 6748335765
+- Current Version: 1.1.3
+
+## FAQ
+
+### What is SketchGenius?
+SketchGenius is an iOS app that uses AI to turn hand-drawn sketches into polished digital artwork. Draw on a canvas, choose an art style, add a text prompt, and AI generates a finished piece in real-time.
+
+### Is SketchGenius free?
+Yes. Free to download with daily free credits for AI generation. Optional subscription ($3.99/month) and one-time credit packs ($9.99–$49.99) for more usage.
+
+### Does it support Apple Pencil?
+Yes. Full Apple Pencil support with pressure sensitivity and tilt detection via PencilKit.
+
+### What devices are supported?
+iPhone and iPad running iOS 18.4 or later. Best experience on iPad with Apple Pencil.
+
+### How fast is AI generation?
+A few seconds. The app shows a live streaming preview during generation using Server-Sent Events, so users see partial results in real-time.
+
+### Can I save and share artwork?
+Yes. All artwork is saved to an in-app library. Users can also save to the iOS photo library and share via any app.
+
+### Do I need an account?
+No. The app uses automatic device-based authentication. No email, password, or signup required.
+
+### What art styles are available?
+Multiple styles including base conversion (sketch to digital art) and various creative styles. The collection is growing with updates.
