@@ -16,7 +16,7 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
+            line-height: 1.7;
             color: var(--text-main);
             background-color: var(--bg-body);
             margin: 0;
@@ -63,20 +63,10 @@
             color: #374151;
         }
 
-        p {
-            margin-bottom: 16px;
-        }
+        p { margin-bottom: 16px; }
+        ul { padding-left: 20px; margin-bottom: 16px; }
+        li { margin-bottom: 8px; }
 
-        ul {
-            padding-left: 20px;
-            margin-bottom: 16px;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
-        /* Tables Styles */
         .table-container {
             overflow-x: auto;
             margin: 20px 0;
@@ -99,11 +89,8 @@
             color: #374151;
         }
 
-        tr:nth-child(even) {
-            background-color: #f9fafb;
-        }
+        tr:nth-child(even) { background-color: #f9fafb; }
 
-        /* Quick Navigation */
         .nav-box {
             background: #f3f4f6;
             padding: 20px;
@@ -129,8 +116,24 @@
             font-size: 0.9rem;
         }
 
-        .nav-box a:hover {
-            text-decoration: underline;
+        .nav-box a:hover { text-decoration: underline; }
+
+        .disclaimer-box {
+            background: #fef3c7;
+            border: 1px solid #f59e0b;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-size: 0.92rem;
+        }
+
+        .disclaimer-box strong { color: #92400e; }
+
+        .caps-text {
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 0.92rem;
+            line-height: 1.6;
         }
 
         footer {
@@ -164,60 +167,78 @@
 
 <div class="container">
     <header>
-        <h1>SenticCut - Privacy Policy</h1>
+        <h1>SenticCut &mdash; Privacy Policy</h1>
         <p class="meta-info">
             <strong>Last Updated:</strong> February 7, 2026<br>
-            <strong>Effective Date:</strong> February 7, 2026
+            <strong>Effective Date:</strong> February 7, 2026<br>
+            <strong>Governing Law:</strong> State of California, United States
         </p>
     </header>
 
-    <p>This Privacy Policy describes how <strong>SenticCut</strong> ("we", "us", "our") collects, uses, and protects your information when you use the SenticCut mobile application ("App").</p>
+    <p>This Privacy Policy describes how <strong>SenticCut</strong> ("Company", "we", "us", "our") collects, uses, discloses, and protects your information when you use the SenticCut mobile application ("App", "Service"). This Privacy Policy is incorporated into and forms part of our <a href="TermsOfService.html">Terms of Service</a>.</p>
+
+    <p>By downloading, installing, or using the App, you acknowledge that you have read, understood, and consent to the practices described in this Privacy Policy. If you do not agree, please do not use the App.</p>
 
     <div class="nav-box">
         <h4>Table of Contents</h4>
         <ul>
             <li><a href="#section-1">1. Information We Collect</a></li>
             <li><a href="#section-2">2. How We Use Information</a></li>
-            <li><a href="#section-3">3. Processing & Retention</a></li>
+            <li><a href="#section-3">3. Processing &amp; Retention</a></li>
             <li><a href="#section-4">4. Third-Party Services</a></li>
             <li><a href="#section-5">5. Data Security</a></li>
-            <li><a href="#section-6">6. Your Rights & Choices</a></li>
-            <li><a href="#section-12">12. Contact Us</a></li>
+            <li><a href="#section-6">6. Your Rights &amp; Choices</a></li>
+            <li><a href="#section-7">7. Children's Privacy</a></li>
+            <li><a href="#section-8">8. International Transfers</a></li>
+            <li><a href="#section-9">9. California Privacy Rights</a></li>
+            <li><a href="#section-10">10. Do Not Sell / Share</a></li>
+            <li><a href="#section-11">11. Disclaimer &amp; Limitation</a></li>
+            <li><a href="#section-12">12. Changes to This Policy</a></li>
+            <li><a href="#section-13">13. Contact Us</a></li>
         </ul>
     </div>
 
+    <!-- =========================================== -->
+    <!-- SECTION 1 -->
+    <!-- =========================================== -->
     <h2 id="section-1">1. Information We Collect</h2>
 
     <h3>1.1 Information Collected Automatically</h3>
     <div class="table-container">
         <table>
             <thead>
-                <tr>
-                    <th>Data</th>
-                    <th>Purpose</th>
-                    <th>Storage</th>
-                </tr>
+                <tr><th>Data</th><th>Purpose</th><th>Storage</th><th>Retention</th></tr>
             </thead>
             <tbody>
                 <tr>
                     <td><strong>Anonymous User ID (UUID)</strong></td>
-                    <td>Identify credit balance & usage</td>
-                    <td>Device Keychain (iCloud sync)</td>
+                    <td>Identify credit balance &amp; usage</td>
+                    <td>Device Keychain (iCloud sync) &amp; our server</td>
+                    <td>Until user resets or deletes App</td>
                 </tr>
                 <tr>
                     <td><strong>Device Check Token</strong></td>
-                    <td>Fraud prevention</td>
-                    <td>Not stored (per-request)</td>
+                    <td>Fraud prevention &amp; device validation</td>
+                    <td>Not stored; generated per-request</td>
+                    <td>Not retained</td>
                 </tr>
                 <tr>
                     <td><strong>App Usage Analytics</strong></td>
-                    <td>Improve performance</td>
-                    <td>Firebase (Anonymized)</td>
+                    <td>Improve app performance &amp; features</td>
+                    <td>Firebase Analytics (anonymized)</td>
+                    <td>14 months (Google policy)</td>
                 </tr>
                 <tr>
                     <td><strong>Crash Reports</strong></td>
-                    <td>Bug fixing</td>
+                    <td>Bug fixing &amp; stability</td>
                     <td>Firebase Crashlytics</td>
+                    <td>90 days</td>
+                </tr>
+                <tr>
+                    <td><strong>Install Date &amp; Usage Counts</strong></td>
+                    <td>Analytics &amp; credit eligibility</td>
+                    <td>Device only (UserDefaults)</td>
+                    <td>Until App deletion</td>
                 </tr>
             </tbody>
         </table>
@@ -227,84 +248,364 @@
     <div class="table-container">
         <table>
             <thead>
-                <tr>
-                    <th>Data</th>
-                    <th>Purpose</th>
-                    <th>Storage</th>
-                </tr>
+                <tr><th>Data</th><th>Purpose</th><th>Storage</th><th>Retention</th></tr>
             </thead>
             <tbody>
                 <tr>
                     <td><strong>Video Content</strong></td>
-                    <td>AI Analysis & Editing</td>
-                    <td>Passed to Google Gemini; <strong>Not stored</strong></td>
+                    <td>AI-powered video analysis &amp; editing</td>
+                    <td>Passed directly to Google Gemini API; <strong>NOT stored on our servers</strong></td>
+                    <td>Not retained after processing</td>
                 </tr>
                 <tr>
                     <td><strong>Text Prompts</strong></td>
-                    <td>Guide AI decisions</td>
-                    <td>Passed to Google Gemini; <strong>Not stored</strong></td>
+                    <td>Guide AI editing decisions</td>
+                    <td>Passed directly to Google Gemini API; <strong>NOT stored on our servers</strong></td>
+                    <td>Not retained after processing</td>
                 </tr>
             </tbody>
         </table>
     </div>
 
     <h3>1.3 Information We Do NOT Collect</h3>
-    <p>We prioritize your privacy by <strong>not</strong> collecting:</p>
+    <p>We prioritize your privacy. We do <strong>not</strong> collect:</p>
     <ul>
-        <li>Names, email addresses, or phone numbers.</li>
-        <li>Location data or Browsing history.</li>
-        <li>Contacts, Address book, or Health data.</li>
-        <li>Financial information (all payments handled by Apple).</li>
+        <li>Names, email addresses, phone numbers, or passwords</li>
+        <li>Location data (GPS, IP-based, or otherwise)</li>
+        <li>Contacts, address book, calendar data, or health data</li>
+        <li>Browsing history or search history</li>
+        <li>Photos (only videos you explicitly select for editing)</li>
+        <li>Financial information (all payments handled exclusively by Apple)</li>
+        <li>Biometric data or face/voice recognition data</li>
     </ul>
 
+    <!-- =========================================== -->
+    <!-- SECTION 2 -->
+    <!-- =========================================== -->
     <h2 id="section-2">2. How We Use Your Information</h2>
+
+    <h3>2.1 Legal Basis for Processing</h3>
+    <p>We process your information on the following legal bases:</p>
     <ul>
-        <li><strong>AI Video Processing:</strong> Core functionality of the App.</li>
-        <li><strong>Credit Management:</strong> Tracking balances and daily free allocations.</li>
-        <li><strong>Fraud Prevention:</strong> Validating genuine device requests.</li>
-        <li><strong>Crash Reporting:</strong> Ensuring stability and quick bug fixes.</li>
+        <li><strong>Contractual Necessity:</strong> Processing your videos and prompts is necessary to provide the App's core service.</li>
+        <li><strong>Legitimate Interest:</strong> Analytics and crash reporting help us maintain and improve the App.</li>
+        <li><strong>Consent:</strong> Local notifications are only sent with your explicit permission.</li>
+        <li><strong>Fraud Prevention:</strong> Device validation protects the integrity of the credit system.</li>
     </ul>
 
-    <h2 id="section-3">3. Data Processing & Retention</h2>
-    <h3>3.1 Video Content & Prompts</h3>
-    <p>Videos and prompts are passed directly to <strong>Google Gemini API</strong> through our backend server as a secure relay. <strong>We do not store or retain your video content on our servers.</strong> Data is encrypted via HTTPS and no video data remains on our infrastructure after processing.</p>
-
-    <h3>3.2 What We DO Store</h3>
+    <h3>2.2 Specific Uses</h3>
     <ul>
-        <li><strong>Anonymous User ID (UUID)</strong></li>
-        <li><strong>Purchase Records</strong> (Verification data from Apple StoreKit)</li>
-        <li><strong>Credit Balance & User Tier Status</strong></li>
+        <li><strong>AI Video Processing:</strong> Videos and prompts are relayed to Google Gemini API for AI analysis. This is the core functionality of the App.</li>
+        <li><strong>Credit Management:</strong> Your anonymous ID tracks your credit balance, purchase history, and daily free credit allocation.</li>
+        <li><strong>Fraud Prevention:</strong> Apple DeviceCheck tokens help prevent abuse and automated exploitation of the credit system.</li>
+        <li><strong>Analytics:</strong> Firebase Analytics helps us understand feature usage patterns to improve the App.</li>
+        <li><strong>Crash Reporting:</strong> Firebase Crashlytics collects crash data to help us identify and fix bugs.</li>
+        <li><strong>Local Notifications:</strong> If you grant permission, we send on-device notifications about daily credits and creative inspiration. These are local (on-device) notifications, not server-pushed.</li>
     </ul>
 
+    <h3>2.3 What We Do NOT Do With Your Data</h3>
+    <ul>
+        <li>We do <strong>not</strong> sell, rent, or lease your personal information to third parties.</li>
+        <li>We do <strong>not</strong> use your videos or prompts to train AI models.</li>
+        <li>We do <strong>not</strong> use your data for targeted advertising.</li>
+        <li>We do <strong>not</strong> share your data with data brokers.</li>
+        <li>We do <strong>not</strong> create advertising profiles based on your usage.</li>
+    </ul>
+
+    <!-- =========================================== -->
+    <!-- SECTION 3 -->
+    <!-- =========================================== -->
+    <h2 id="section-3">3. Data Processing &amp; Retention</h2>
+
+    <h3>3.1 Video Content &amp; Prompts</h3>
+    <ul>
+        <li>Videos and prompts are <strong>passed directly to Google Gemini API</strong> through our backend server for AI analysis.</li>
+        <li><strong>We do not store, retain, copy, or archive your video content or prompts on our servers.</strong></li>
+        <li>Our server acts solely as a secure encrypted relay (HTTPS) between your device and Google Gemini API.</li>
+        <li>After AI processing is complete, no video data or prompt data remains on our infrastructure.</li>
+        <li>We have no ability to access, review, or retrieve your video content after processing.</li>
+    </ul>
+
+    <h3>3.2 What We DO Store on Our Servers</h3>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr><th>Data</th><th>Purpose</th><th>Retention Period</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Anonymous User ID (UUID)</td>
+                    <td>Account identification &amp; credit tracking</td>
+                    <td>Until user resets or requests deletion</td>
+                </tr>
+                <tr>
+                    <td>Purchase Verification Records</td>
+                    <td>Validate Apple StoreKit transactions</td>
+                    <td>Indefinitely (for transaction integrity)</td>
+                </tr>
+                <tr>
+                    <td>Credit Balance &amp; Usage History</td>
+                    <td>Service delivery &amp; billing</td>
+                    <td>Until user resets or requests deletion</td>
+                </tr>
+                <tr>
+                    <td>User Tier Status (free/paid)</td>
+                    <td>Service level determination</td>
+                    <td>Until user resets or requests deletion</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>3.3 Third-Party Data Retention</h3>
+    <ul>
+        <li><strong>Firebase Analytics:</strong> Retained for 14 months per Google's data retention policy, then automatically deleted.</li>
+        <li><strong>Firebase Crashlytics:</strong> Crash reports retained for 90 days.</li>
+        <li><strong>Google Gemini API:</strong> Subject to Google's data processing terms. We do not control Google's retention of data processed through their API.</li>
+    </ul>
+
+    <!-- =========================================== -->
+    <!-- SECTION 4 -->
+    <!-- =========================================== -->
     <h2 id="section-4">4. Third-Party Services</h2>
+
+    <p>The App utilizes the following third-party services, each governed by their own separate terms and privacy policies:</p>
+
+    <h3>4.1 Firebase (Google LLC)</h3>
     <ul>
-        <li><strong>Firebase (Google):</strong> Analytics and Crashlytics.</li>
-        <li><strong>Google Gemini AI:</strong> Performance of AI-driven video analysis.</li>
-        <li><strong>Apple Services:</strong> App Store, StoreKit, and DeviceCheck.</li>
+        <li><strong>Firebase Analytics:</strong> Collects anonymized usage events (e.g., video selected, analysis complete, export done).</li>
+        <li><strong>Firebase Crashlytics:</strong> Collects crash reports and error logs, including anonymous user ID and user tier for debugging.</li>
+        <li>Firebase Privacy Policy: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a></li>
     </ul>
 
+    <h3>4.2 Google Gemini AI (Google LLC)</h3>
+    <ul>
+        <li>Video analysis is performed using Google's Gemini AI model via our backend server.</li>
+        <li>Your video content and prompts are transmitted through our server to Google's AI services for processing.</li>
+        <li>Google Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></li>
+    </ul>
+
+    <h3>4.3 Apple Services</h3>
+    <ul>
+        <li><strong>App Store / StoreKit:</strong> Handles all in-app purchase transactions. We do not have access to your payment information.</li>
+        <li><strong>DeviceCheck:</strong> Provides a device-level fraud prevention token. No personal data is shared.</li>
+        <li><strong>iCloud Keychain:</strong> Stores your anonymous user ID securely and syncs across your Apple devices.</li>
+        <li>Apple Privacy Policy: <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy</a></li>
+    </ul>
+
+    <div class="disclaimer-box">
+        <strong>Third-Party Disclaimer:</strong> We are not responsible for the privacy practices, data handling, or policies of any third-party services. Your interaction with third-party services is governed by their respective terms and privacy policies. We encourage you to review them independently. To the fullest extent permitted by applicable law, we disclaim all liability arising from third-party data processing.
+    </div>
+
+    <!-- =========================================== -->
+    <!-- SECTION 5 -->
+    <!-- =========================================== -->
     <h2 id="section-5">5. Data Security</h2>
-    <p>We use industry-standard measures including:</p>
+
+    <p>We implement industry-standard security measures to protect your information:</p>
     <ul>
-        <li><strong>Encryption in Transit:</strong> All data uses HTTPS/TLS.</li>
-        <li><strong>Request Signing:</strong> API requests signed with HMAC-SHA256.</li>
-        <li><strong>Keychain Storage:</strong> Secure storage of identifiers on iOS.</li>
+        <li><strong>Encryption in Transit:</strong> All data transmitted between the App and our servers uses HTTPS/TLS encryption.</li>
+        <li><strong>Request Signing:</strong> Every API request is signed with HMAC-SHA256 to prevent tampering and unauthorized access.</li>
+        <li><strong>Device Validation:</strong> Apple DeviceCheck tokens validate that requests originate from genuine Apple devices.</li>
+        <li><strong>Keychain Storage:</strong> Your anonymous identifier is stored in the iOS Keychain, the most secure storage mechanism available on iOS.</li>
+        <li><strong>No Plaintext Secrets:</strong> All sensitive credentials within the App are obfuscated.</li>
     </ul>
 
-    <h2 id="section-6">6. Your Rights & Choices</h2>
-    <p>You can <strong>Reset Your Identity</strong> at any time in the App Settings. This creates a new profile and resets your credit history. You also have full control over Photo Library access and Notifications via iOS System Settings.</p>
+    <div class="disclaimer-box">
+        <strong>Security Disclaimer:</strong> While we use commercially reasonable measures to protect your information, no method of electronic transmission or storage is 100% secure. TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, WE CANNOT AND DO NOT GUARANTEE ABSOLUTE SECURITY OF YOUR DATA. We are not responsible for unauthorized access to your data resulting from circumstances beyond our reasonable control, including but not limited to device compromise, third-party breaches, or vulnerabilities in third-party services. You acknowledge that you provide your information at your own risk.
+    </div>
 
-    <h2 id="section-12">12. Contact Us</h2>
+    <!-- =========================================== -->
+    <!-- SECTION 6 -->
+    <!-- =========================================== -->
+    <h2 id="section-6">6. Your Rights &amp; Choices</h2>
+
+    <h3>6.1 Reset Your Identity</h3>
+    <p>You can reset your anonymous user ID at any time through the App's Settings. This effectively creates a new user profile with no history. <strong>Note:</strong> This will irreversibly reset your credit balance. We bear no responsibility for credits or data lost as a result of a user-initiated reset.</p>
+
+    <h3>6.2 Notification Control</h3>
+    <p>You can enable or disable notifications at any time through iOS Settings. The App uses only local (on-device) notifications, not server-pushed notifications.</p>
+
+    <h3>6.3 Photo Library Access</h3>
+    <p>You can revoke photo library access at any time through iOS Settings &gt; Privacy &gt; Photos. The App requires this permission to function; revoking it will prevent you from selecting videos for editing.</p>
+
+    <h3>6.4 Analytics Opt-Out</h3>
+    <p>You can limit analytics collection through iOS Settings &gt; Privacy &gt; Tracking. You may also disable analytics by restricting the App's network access.</p>
+
+    <h3>6.5 Delete Your Data</h3>
+    <p>Since we use anonymous identifiers and do not permanently store your video content:</p>
+    <ul>
+        <li>Resetting your user ID in Settings effectively disassociates your identity from our servers.</li>
+        <li>For complete deletion of any server-side data associated with your UUID, contact us at the email below with your anonymous user ID (available in Settings).</li>
+        <li>We will process deletion requests within 45 days, as required by applicable California law.</li>
+    </ul>
+
+    <!-- =========================================== -->
+    <!-- SECTION 7 -->
+    <!-- =========================================== -->
+    <h2 id="section-7">7. Children's Privacy</h2>
+
+    <p>The App is not directed at children under 13 years of age. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe that your child under 13 has provided personal information through the App, please contact us immediately at the email below, and we will take steps to promptly delete such information.</p>
+
+    <p>If we learn that we have inadvertently collected personal information from a child under 13 without verifiable parental consent, we will delete that information as quickly as possible in compliance with the Children's Online Privacy Protection Act (COPPA).</p>
+
+    <!-- =========================================== -->
+    <!-- SECTION 8 -->
+    <!-- =========================================== -->
+    <h2 id="section-8">8. International Data Transfers</h2>
+
+    <p>Your video content, prompts, and associated data may be processed on servers located outside your country of residence, including in the United States and other jurisdictions where our service providers (Google, Apple) operate data centers.</p>
+
+    <p>By using the App, you consent to the transfer of your data to jurisdictions that may have different data protection laws than your jurisdiction. All international transfers are protected by HTTPS encryption and our security measures described in Section 5.</p>
+
+    <p>TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, WE DISCLAIM LIABILITY FOR ANY DATA PROCESSING THAT OCCURS IN JURISDICTIONS OUTSIDE YOUR COUNTRY OF RESIDENCE AS A RESULT OF YOUR USE OF THE SERVICE OR THIRD-PARTY SERVICE PROVIDERS.</p>
+
+    <!-- =========================================== -->
+    <!-- SECTION 9 -->
+    <!-- =========================================== -->
+    <h2 id="section-9">9. California Privacy Rights (CCPA / CPRA)</h2>
+
+    <p>If you are a California resident, you have specific rights under the California Consumer Privacy Act (Cal. Civ. Code &sect; 1798.100 et seq.) and the California Privacy Rights Act:</p>
+
+    <h3>9.1 Your Rights</h3>
+    <ul>
+        <li><strong>Right to Know:</strong> You have the right to request disclosure of the categories and specific pieces of personal information we have collected about you.</li>
+        <li><strong>Right to Delete:</strong> You have the right to request deletion of your personal information, subject to certain exceptions.</li>
+        <li><strong>Right to Correct:</strong> You have the right to request correction of inaccurate personal information.</li>
+        <li><strong>Right to Opt-Out of Sale/Sharing:</strong> We do not sell or share your personal information for cross-context behavioral advertising.</li>
+        <li><strong>Right to Limit Use of Sensitive Personal Information:</strong> We do not collect sensitive personal information as defined under CPRA.</li>
+        <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising any of your privacy rights.</li>
+    </ul>
+
+    <h3>9.2 Categories of Information (CCPA Disclosure)</h3>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr><th>Category</th><th>Collected?</th><th>Sold?</th><th>Shared?</th><th>Business Purpose</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Identifiers (UUID)</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                    <td>No</td>
+                    <td>Service delivery, credit tracking</td>
+                </tr>
+                <tr>
+                    <td>Internet Activity (analytics)</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                    <td>Yes (Firebase)</td>
+                    <td>App improvement, crash fixing</td>
+                </tr>
+                <tr>
+                    <td>Commercial Info (purchases)</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                    <td>No</td>
+                    <td>Transaction verification</td>
+                </tr>
+                <tr>
+                    <td>Audio/Visual (video content)</td>
+                    <td>Processed, not stored</td>
+                    <td>No</td>
+                    <td>Yes (Google Gemini)</td>
+                    <td>AI video analysis (core service)</td>
+                </tr>
+                <tr>
+                    <td>Geolocation Data</td>
+                    <td>No</td>
+                    <td>No</td>
+                    <td>No</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>Sensitive Personal Info</td>
+                    <td>No</td>
+                    <td>No</td>
+                    <td>No</td>
+                    <td>N/A</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>9.3 Exercising Your Rights</h3>
+    <p>To exercise your California privacy rights, you may:</p>
+    <ul>
+        <li>Reset your anonymous user ID in the App's Settings (immediate self-service)</li>
+        <li>Email us at <a href="mailto:support@synthesislogic.com">support@synthesislogic.com</a> with your request and anonymous user ID</li>
+    </ul>
+    <p>We will verify your identity using your anonymous user ID and respond to verifiable consumer requests within 45 days. If we need additional time, we will notify you of the extension and the reason (up to 90 days total as permitted by law).</p>
+
+    <!-- =========================================== -->
+    <!-- SECTION 10 -->
+    <!-- =========================================== -->
+    <h2 id="section-10">10. Do Not Sell or Share My Personal Information</h2>
+
+    <p><strong>We do not sell your personal information.</strong> We do not share your personal information for cross-context behavioral advertising. As defined under the California Consumer Privacy Act (CCPA) and the California Privacy Rights Act (CPRA), "sell" means disclosing personal information for monetary or other valuable consideration, and "share" means disclosing for cross-context behavioral advertising purposes.</p>
+
+    <p>While we transmit video content to Google Gemini API for processing (which is a "service provider" relationship, not a "sale" or "share" under CCPA), we have contractual obligations with our service providers that restrict them from using your data for purposes other than providing services to us.</p>
+
+    <!-- =========================================== -->
+    <!-- SECTION 11 -->
+    <!-- =========================================== -->
+    <h2 id="section-11">11. Disclaimer &amp; Limitation of Liability</h2>
+
+    <div class="disclaimer-box">
+        <p class="caps-text">TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, INCLUDING BUT NOT LIMITED TO CALIFORNIA LAW:</p>
+
+        <p class="caps-text">THE COMPANY PROVIDES THIS PRIVACY POLICY AND ALL RELATED DATA PROCESSING SERVICES ON AN "AS IS" AND "AS AVAILABLE" BASIS. WE MAKE NO REPRESENTATIONS OR WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, REGARDING THE COMPLETENESS, ACCURACY, RELIABILITY, OR SECURITY OF OUR DATA PROCESSING PRACTICES.</p>
+
+        <p class="caps-text">IN NO EVENT SHALL THE COMPANY, ITS OFFICERS, DIRECTORS, EMPLOYEES, AGENTS, OR AFFILIATES BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING FROM OR RELATED TO:</p>
+
+        <ul>
+            <li>ANY UNAUTHORIZED ACCESS TO OR USE OF YOUR DATA</li>
+            <li>ANY INTERRUPTION OR CESSATION OF DATA TRANSMISSION</li>
+            <li>ANY BUGS, VIRUSES, OR OTHER HARMFUL CODE TRANSMITTED THROUGH THE SERVICE</li>
+            <li>ANY LOSS OR DAMAGE TO YOUR CONTENT OR DATA</li>
+            <li>THE ACTIONS OR INACTIONS OF ANY THIRD-PARTY SERVICE PROVIDER (INCLUDING GOOGLE AND APPLE)</li>
+            <li>ANY DATA BREACH OR SECURITY INCIDENT NOT CAUSED BY OUR GROSS NEGLIGENCE OR WILLFUL MISCONDUCT</li>
+        </ul>
+
+        <p class="caps-text">OUR TOTAL AGGREGATE LIABILITY ARISING FROM OR RELATED TO THIS PRIVACY POLICY OR OUR DATA PROCESSING PRACTICES SHALL NOT EXCEED THE GREATER OF: (A) ONE HUNDRED UNITED STATES DOLLARS ($100.00 USD); OR (B) THE AMOUNTS PAID BY YOU TO THE COMPANY IN THE TWELVE (12) MONTHS PRECEDING THE EVENT.</p>
+
+        <p class="caps-text">THE FOREGOING LIMITATIONS SHALL NOT APPLY TO LIABILITY ARISING FROM THE COMPANY'S GROSS NEGLIGENCE, WILLFUL MISCONDUCT, OR FRAUD, TO THE EXTENT SUCH LIMITATION IS PROHIBITED BY CAL. CIV. CODE SECTION 1668.</p>
+
+        <p class="caps-text">NOTHING IN THIS PRIVACY POLICY SHALL BE CONSTRUED TO WAIVE YOUR RIGHTS UNDER THE CALIFORNIA CONSUMER LEGAL REMEDIES ACT (CAL. CIV. CODE &sect; 1750 ET SEQ.).</p>
+    </div>
+
+    <!-- =========================================== -->
+    <!-- SECTION 12 -->
+    <!-- =========================================== -->
+    <h2 id="section-12">12. Changes to This Policy</h2>
+
+    <p>We may update this Privacy Policy from time to time to reflect changes in our practices, legal requirements, or service features. When we make changes:</p>
+    <ul>
+        <li>The "Last Updated" date at the top of this page will be revised.</li>
+        <li>Material changes may be communicated through the App or the App Store listing.</li>
+        <li>Your continued use of the App after any changes constitutes your acceptance of the updated Privacy Policy.</li>
+    </ul>
+    <p>We encourage you to review this Privacy Policy periodically. If we make material changes that significantly affect your rights, we will make reasonable efforts to provide notice prior to the change taking effect.</p>
+
+    <!-- =========================================== -->
+    <!-- SECTION 13 -->
+    <!-- =========================================== -->
+    <h2 id="section-13">13. Contact Us</h2>
+
     <div class="contact-box">
-        <p>If you have questions about this Privacy Policy, reach out to us:</p>
+        <p>If you have questions about this Privacy Policy, wish to exercise your privacy rights, or have concerns about our data practices, contact us at:</p>
         <p>
+            <strong>SenticCut / Synthesis Logic LTD</strong><br>
             <strong>Email:</strong> <a href="mailto:support@synthesislogic.com">support@synthesislogic.com</a><br>
-            <strong>Website:</strong> <a href="https://synthesislogic.com" target="_blank">apps.synthesislogic.com</a>
+            <strong>Website:</strong> <a href="https://synthesislogic.com" target="_blank" rel="noopener">synthesislogic.com</a>
         </p>
+        <p>For California-specific privacy inquiries, please include "California Privacy Request" in your email subject line. We will respond within the timeframes required by applicable law.</p>
     </div>
 
     <footer>
-        <p>&copy; 2026 SenticCut / Synthesis Logic LTD. All rights reserved.</p>
+        <p>&copy; 2025&ndash;2026 SenticCut / Synthesis Logic LTD. All rights reserved.</p>
+        <p style="font-size: 0.8rem; margin-top: 8px;">This Privacy Policy is governed by the laws of the State of California, United States of America.</p>
     </footer>
 </div>
 
