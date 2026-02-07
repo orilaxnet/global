@@ -53,9 +53,8 @@ Example prompts users can provide:
 ## Pricing Model
 
 SenticCut uses a credit-based system:
-- **Free Tier**: Users receive free credits daily. Full access to all AI editing features, transitions, effects, and export. No account or login required.
-- **Mini Credit Pack ($2.99)**: One-time purchase of additional credits. Credits never expire. No subscription.
-- **Max Credit Pack ($9.99)**: Larger one-time credit pack. Credits never expire. No subscription.
+- **Free ($0 / forever)**: Free credits every day. Full AI editing features, all transitions & effects, export to camera roll. No account needed.
+- **Credit Packs ($2.99+)**: One-time purchase of bulk credits. Credits never expire. No subscription required. Priority processing.
 
 Each AI video edit costs one credit. There are no feature limitations between free and paid users — the only difference is the number of available credits.
 
