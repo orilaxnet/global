@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SenticCut - AI Video Editor | Edit Videos with AI in Seconds</title>
-    <meta name="description" content="SenticCut is the fastest AI-powered video editor for iOS. Upload your video, describe your vision, and let AI handle the rest. Free to start.">
-    <meta name="keywords" content="AI video editor, video editing app, iOS video editor, automatic video editing, AI video maker, SenticCut, mobile video editor">
+    <meta name="description" content="SenticCut is the fastest AI-powered video editor for iOS. Upload your video, describe your vision, and let AI handle cuts, transitions, effects, and audio in under 30 seconds. Free daily credits.">
+    <meta name="keywords" content="AI video editor, video editing app, iOS video editor, automatic video editing, AI video maker, SenticCut, mobile video editor, AI cuts, AI transitions, video AI tool">
     <meta name="author" content="SynthesisLogic">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
     <link rel="canonical" href="https://synthesislogic.com/SenticCut/">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="SenticCut - AI Video Editor">
-    <meta property="og:description" content="Upload your video, describe your vision, and let AI edit it in seconds. The fastest way to create stunning videos on iOS.">
+    <meta property="og:title" content="SenticCut - AI Video Editor for iOS">
+    <meta property="og:description" content="Upload your video, describe your vision, and let AI edit it in seconds. Smart cuts, transitions, color grading, and audio. Free to start.">
     <meta property="og:url" content="https://synthesislogic.com/SenticCut/">
     <meta property="og:site_name" content="SenticCut">
     <meta property="og:locale" content="en_US">
@@ -23,1058 +23,572 @@
     <meta name="twitter:title" content="SenticCut - AI Video Editor">
     <meta name="twitter:description" content="Upload your video, describe your vision, and let AI edit it in seconds.">
 
-    <!-- Structured Data -->
+    <!-- Structured Data: SoftwareApplication -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "MobileApplication",
+        "@type": "SoftwareApplication",
         "name": "SenticCut",
-        "operatingSystem": "iOS",
+        "alternateName": "SenticCut AI Video Editor",
+        "operatingSystem": "iOS 17.0+",
         "applicationCategory": "MultimediaApplication",
-        "description": "AI-powered video editor. Upload your video, describe your vision, and let AI handle the editing — cuts, transitions, effects, audio, and speed adjustments.",
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-        },
-        "author": {
-            "@type": "Organization",
-            "name": "SynthesisLogic",
-            "url": "https://synthesislogic.com"
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "ratingCount": "120"
-        }
+        "applicationSubCategory": "Video Editing",
+        "description": "SenticCut is an AI-powered video editor for iPhone and iPad. Users upload a video, type a text prompt describing their desired edit style, and the AI automatically applies smart cuts, transitions, color grading, audio adjustments, and speed effects. No timeline or manual editing required. The entire process takes under 30 seconds.",
+        "featureList": "AI-powered smart cuts, Automatic transitions (dissolve and fade), Color grading (brightness contrast saturation), Audio intelligence (volume fade-in fade-out muting), Dynamic speed control, Privacy-first (videos never stored), Free daily credits, No account required",
+        "softwareVersion": "1.0",
+        "datePublished": "2025-01-01",
+        "inLanguage": "en",
+        "isAccessibleForFree": true,
+        "offers": [
+            { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free tier with daily credits and full AI editing features" },
+            { "@type": "Offer", "price": "2.99", "priceCurrency": "USD", "description": "Credit packs - one-time purchase, never expire" }
+        ],
+        "author": { "@type": "Organization", "name": "SynthesisLogic", "url": "https://synthesislogic.com", "email": "support@synthesislogic.com" },
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "bestRating": "5", "ratingCount": "120" }
     }
     </script>
 
-    <!-- Preconnect -->
+    <!-- Structured Data: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            { "@type": "Question", "name": "What is SenticCut?", "acceptedAnswer": { "@type": "Answer", "text": "SenticCut is an AI-powered video editing app for iOS. You upload a video, type a text prompt describing your desired edit style, and the AI automatically performs all editing including smart cuts, transitions, color grading, audio adjustments, and speed changes in under 30 seconds." } },
+            { "@type": "Question", "name": "Is SenticCut free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. SenticCut offers free credits every day with no account required. The free tier includes full AI editing features, all transitions, effects, and export. Credit packs start at $2.99 as one-time purchases with no subscription." } },
+            { "@type": "Question", "name": "How does SenticCut use AI to edit videos?", "acceptedAnswer": { "@type": "Answer", "text": "SenticCut uses Google Gemini AI to analyze your video. The AI identifies key moments, generates a complete editing plan with cuts, transitions (dissolve, fade), color grading (brightness, contrast, saturation), per-segment audio adjustments, and dynamic speed changes. All from a single text prompt." } },
+            { "@type": "Question", "name": "Is my video data private?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Videos are transmitted via encrypted HTTPS for AI analysis and immediately discarded after processing. SenticCut never stores your videos on its servers. No email or login required. All API requests are signed with HMAC-SHA256." } },
+            { "@type": "Question", "name": "What devices does SenticCut support?", "acceptedAnswer": { "@type": "Answer", "text": "SenticCut requires iOS 17.0 or later and supports iPhone and iPad." } },
+            { "@type": "Question", "name": "How is SenticCut different from CapCut or iMovie?", "acceptedAnswer": { "@type": "Answer", "text": "Unlike CapCut, iMovie, or Premiere Rush which require manual timeline editing, SenticCut is fully AI-driven. You describe what you want in plain text and AI handles everything. No timeline, no learning curve, results in under 30 seconds." } }
+        ]
+    }
+    </script>
+
+    <!-- Structured Data: HowTo -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to Edit a Video with AI Using SenticCut",
+        "description": "Edit any video automatically using AI in three simple steps.",
+        "totalTime": "PT30S",
+        "step": [
+            { "@type": "HowToStep", "position": 1, "name": "Select your video", "text": "Open SenticCut and select a video from your photo library." },
+            { "@type": "HowToStep", "position": 2, "name": "Describe your edit", "text": "Type a text prompt like 'cinematic with slow transitions' or 'fast TikTok edit'." },
+            { "@type": "HowToStep", "position": 3, "name": "AI edits and export", "text": "Wait ~30 seconds. AI applies cuts, transitions, color grading, audio, and speed effects. Export to camera roll." }
+        ]
+    }
+    </script>
+
+    <!-- Structured Data: WebPage + Speakable -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "SenticCut - AI Video Editor for iOS",
+        "url": "https://synthesislogic.com/SenticCut/",
+        "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["#about", "#faq"] }
+    }
+    </script>
+
+    <!-- Structured Data: Organization -->
+    <script type="application/ld+json">
+    { "@context": "https://schema.org", "@type": "Organization", "name": "SynthesisLogic", "url": "https://synthesislogic.com", "email": "support@synthesislogic.com" }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <style>
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        :root{
+            --p:#8B5CF6;--p2:#7C3AED;--ac:#EC4899;
+            --bg:#050507;--bg2:#0C0C12;--bg3:#12121A;
+            --t:#F1F5F9;--t2:#94A3B8;--t3:#475569;
+            --b:rgba(255,255,255,0.06);--glow:rgba(139,92,246,0.35);
+        }
+        html{scroll-behavior:smooth}
+        body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--t);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 
-        :root {
-            --primary: #8B5CF6;
-            --primary-dark: #7C3AED;
-            --accent: #EC4899;
-            --bg-dark: #0A0A0F;
-            --bg-card: #13131A;
-            --bg-card-hover: #1A1A25;
-            --text: #F8FAFC;
-            --text-muted: #94A3B8;
-            --text-dim: #64748B;
-            --border: rgba(139, 92, 246, 0.15);
-            --glow: rgba(139, 92, 246, 0.4);
-        }
+        /* Animations */
+        @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+        @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+        @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+        @keyframes glow-pulse{0%,100%{opacity:.4}50%{opacity:.7}}
+        @keyframes gradient-x{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+        @keyframes shimmer{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+        @keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+        @keyframes draw{from{stroke-dashoffset:100}to{stroke-dashoffset:0}}
+        @keyframes scale-in{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
+        @keyframes count{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 
-        html { scroll-behavior: smooth; }
+        .anim{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+        .anim.v{opacity:1;transform:translateY(0)}
+        .anim-d1{transition-delay:.1s}.anim-d2{transition-delay:.2s}.anim-d3{transition-delay:.3s}
 
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: var(--bg-dark);
-            color: var(--text);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+        /* Utility */
+        .container{max-width:1100px;margin:0 auto;padding:0 24px}
+        .grad-text{background:linear-gradient(135deg,var(--p),var(--ac));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 
-        /* --- Animations --- */
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(40px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-12px); }
-        }
-        @keyframes pulse-glow {
-            0%, 100% { box-shadow: 0 0 20px var(--glow), 0 0 60px rgba(139, 92, 246, 0.15); }
-            50% { box-shadow: 0 0 40px var(--glow), 0 0 100px rgba(139, 92, 246, 0.25); }
-        }
-        @keyframes gradient-shift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        @keyframes shimmer {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
-        }
-        @keyframes orbit {
-            from { transform: rotate(0deg) translateX(200px) rotate(0deg); }
-            to { transform: rotate(360deg) translateX(200px) rotate(-360deg); }
-        }
-        @keyframes spin-slow {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
+        /* Icons */
+        .icon{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+        .icon-sm{width:18px;height:18px}
+        .icon-lg{width:32px;height:32px}
+        .icon-xl{width:40px;height:40px}
 
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-        .animate-on-scroll.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        /* Nav */
+        nav{position:fixed;top:0;width:100%;z-index:100;backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);background:rgba(5,5,7,.75);border-bottom:1px solid var(--b);transition:all .3s}
+        .nav-in{max-width:1100px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+        .logo{font-size:1.25rem;font-weight:800;letter-spacing:-.03em}
+        .nav-r{display:flex;gap:28px;align-items:center}
+        .nav-r a{color:var(--t2);text-decoration:none;font-size:.85rem;font-weight:500;transition:color .2s}
+        .nav-r a:hover{color:var(--t)}
+        .nav-cta{background:var(--p);color:#fff!important;padding:8px 20px;border-radius:8px;font-weight:600!important;transition:all .2s!important}
+        .nav-cta:hover{background:var(--p2);transform:translateY(-1px)}
 
-        /* --- Nav --- */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 100;
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            background: rgba(10, 10, 15, 0.8);
-            border-bottom: 1px solid var(--border);
-            transition: all 0.3s ease;
-        }
-        .nav-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 16px 24px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .nav-logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            letter-spacing: -0.02em;
-        }
-        .nav-links { display: flex; gap: 32px; align-items: center; }
-        .nav-links a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        .nav-links a:hover { color: var(--text); }
-        .nav-cta {
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            color: #fff !important;
-            padding: 10px 24px;
-            border-radius: 50px;
-            font-weight: 600 !important;
-            transition: transform 0.3s, box-shadow 0.3s !important;
-        }
-        .nav-cta:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 20px var(--glow);
-        }
+        /* Hero */
+        .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:100px 24px 80px;position:relative;overflow:hidden}
+        .hero-glow{position:absolute;width:500px;height:500px;border-radius:50%;filter:blur(120px);opacity:.15;pointer-events:none}
+        .hero-glow-1{background:var(--p);top:-10%;left:20%;animation:glow-pulse 6s ease infinite}
+        .hero-glow-2{background:var(--ac);bottom:-10%;right:15%;animation:glow-pulse 6s ease infinite 3s}
+        .hero-c{position:relative;z-index:1;max-width:720px}
+        .hero-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:8px;background:rgba(139,92,246,.08);border:1px solid rgba(139,92,246,.15);color:var(--p);font-size:.8rem;font-weight:600;margin-bottom:28px;animation:fadeIn .8s ease .2s both}
+        .hero-dot{width:6px;height:6px;border-radius:50%;background:#22C55E;box-shadow:0 0 8px #22C55E}
+        .hero h1{font-size:clamp(2.5rem,6.5vw,4.2rem);font-weight:900;line-height:1.08;letter-spacing:-.04em;margin-bottom:20px;animation:fadeUp .8s ease .3s both}
+        .hero h1 em{font-style:normal;background:linear-gradient(135deg,var(--p),var(--ac),#F59E0B);background-size:200% 200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:gradient-x 5s ease infinite}
+        .hero-p{font-size:clamp(1rem,2vw,1.15rem);color:var(--t2);max-width:520px;margin:0 auto 36px;font-weight:400;line-height:1.7;animation:fadeUp .8s ease .5s both}
+        .hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;animation:fadeUp .8s ease .7s both}
+        .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:10px;font-size:.95rem;font-weight:600;text-decoration:none;transition:all .25s;cursor:pointer;border:none}
+        .btn-p{background:var(--p);color:#fff;position:relative;overflow:hidden}
+        .btn-p::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.1),transparent);animation:shimmer 3s infinite}
+        .btn-p:hover{background:var(--p2);transform:translateY(-2px);box-shadow:0 8px 30px var(--glow)}
+        .btn-s{background:transparent;color:var(--t);border:1px solid var(--b)}
+        .btn-s:hover{border-color:rgba(139,92,246,.3);background:rgba(139,92,246,.05)}
 
-        /* --- Hero --- */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 120px 24px 80px;
-            position: relative;
-            overflow: hidden;
-        }
-        .hero-bg {
-            position: absolute;
-            inset: 0;
-            z-index: 0;
-        }
-        .hero-bg::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(ellipse at 30% 20%, rgba(139, 92, 246, 0.12) 0%, transparent 60%),
-                        radial-gradient(ellipse at 70% 80%, rgba(236, 72, 153, 0.08) 0%, transparent 60%);
-            animation: spin-slow 60s linear infinite;
-        }
-        .hero-orb {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.3;
-        }
-        .hero-orb-1 {
-            width: 400px; height: 400px;
-            background: var(--primary);
-            top: 10%; left: 10%;
-            animation: float 8s ease-in-out infinite;
-        }
-        .hero-orb-2 {
-            width: 300px; height: 300px;
-            background: var(--accent);
-            bottom: 10%; right: 10%;
-            animation: float 6s ease-in-out infinite 2s;
-        }
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 900px;
-            animation: fadeUp 1s ease;
-        }
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 8px 20px;
-            border-radius: 50px;
-            background: rgba(139, 92, 246, 0.1);
-            border: 1px solid var(--border);
-            color: var(--primary);
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 32px;
-            animation: fadeIn 1s ease 0.2s both;
-        }
-        .hero-badge-dot {
-            width: 8px; height: 8px;
-            border-radius: 50%;
-            background: #22C55E;
-            animation: pulse-glow 2s ease infinite;
-            box-shadow: 0 0 8px #22C55E;
-        }
-        .hero h1 {
-            font-size: clamp(2.8rem, 7vw, 5rem);
-            font-weight: 900;
-            line-height: 1.05;
-            letter-spacing: -0.03em;
-            margin-bottom: 24px;
-            animation: fadeUp 1s ease 0.3s both;
-        }
-        .hero h1 .gradient {
-            background: linear-gradient(135deg, var(--primary), var(--accent), #F59E0B);
-            background-size: 200% 200%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: gradient-shift 4s ease infinite;
-        }
-        .hero-sub {
-            font-size: clamp(1.1rem, 2.5vw, 1.35rem);
-            color: var(--text-muted);
-            max-width: 640px;
-            margin: 0 auto 48px;
-            font-weight: 400;
-            line-height: 1.7;
-            animation: fadeUp 1s ease 0.5s both;
-        }
-        .hero-actions {
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-            flex-wrap: wrap;
-            animation: fadeUp 1s ease 0.7s both;
-        }
-        .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 16px 36px;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            color: #fff;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.05rem;
-            font-weight: 700;
-            text-decoration: none;
-            cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
-            position: relative;
-            overflow: hidden;
-        }
-        .btn-primary::after {
-            content: '';
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
-            animation: shimmer 3s infinite;
-        }
-        .btn-primary:hover {
-            transform: translateY(-3px) scale(1.03);
-            box-shadow: 0 8px 40px var(--glow);
-        }
-        .btn-secondary {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 16px 36px;
-            background: transparent;
-            color: var(--text);
-            border: 1px solid rgba(255,255,255,0.15);
-            border-radius: 50px;
-            font-size: 1.05rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-        .btn-secondary:hover {
-            border-color: var(--primary);
-            background: rgba(139, 92, 246, 0.08);
-        }
+        /* Sections */
+        section{padding:100px 0}
+        .s-label{display:inline-flex;align-items:center;gap:6px;color:var(--p);font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;margin-bottom:12px}
+        .s-title{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800;letter-spacing:-.03em;margin-bottom:12px;line-height:1.15}
+        .s-desc{font-size:1rem;color:var(--t2);max-width:480px;line-height:1.7}
+        .s-head{text-align:center;margin-bottom:60px}
+        .s-head .s-desc{margin:0 auto}
 
-        /* --- Section --- */
-        section { padding: 120px 24px; }
-        .section-inner { max-width: 1200px; margin: 0 auto; }
-        .section-label {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--primary);
-            font-size: 0.85rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 16px;
-        }
-        .section-title {
-            font-size: clamp(2rem, 5vw, 3rem);
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            margin-bottom: 16px;
-            line-height: 1.15;
-        }
-        .section-desc {
-            font-size: 1.15rem;
-            color: var(--text-muted);
-            max-width: 600px;
-            line-height: 1.7;
-        }
-        .section-header { text-align: center; margin-bottom: 72px; }
-        .section-header .section-desc { margin: 0 auto; }
+        /* How it works - Onboarding Steps */
+        .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--b);border-radius:16px;overflow:hidden}
+        .step{background:var(--bg2);padding:40px 28px;text-align:center;transition:all .4s;position:relative}
+        .step:hover{background:var(--bg3)}
+        .step-num{width:36px;height:36px;border-radius:8px;background:rgba(139,92,246,.1);color:var(--p);display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:800;margin:0 auto 16px}
+        .step-icon-wrap{width:56px;height:56px;border-radius:14px;background:rgba(139,92,246,.06);border:1px solid rgba(139,92,246,.1);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;color:var(--p);transition:all .3s}
+        .step:hover .step-icon-wrap{background:rgba(139,92,246,.12);border-color:rgba(139,92,246,.2);transform:scale(1.05)}
+        .step h3{font-size:1.05rem;font-weight:700;margin-bottom:8px}
+        .step p{color:var(--t2);font-size:.88rem;line-height:1.6}
 
-        /* --- How It Works --- */
-        .steps-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
-            position: relative;
-        }
-        .step-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 24px;
-            padding: 48px 32px;
-            text-align: center;
-            position: relative;
-            transition: all 0.4s ease;
-        }
-        .step-card:hover {
-            background: var(--bg-card-hover);
-            border-color: rgba(139, 92, 246, 0.3);
-            transform: translateY(-8px);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-        }
-        .step-number {
-            width: 64px; height: 64px;
-            border-radius: 20px;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 800;
-            margin: 0 auto 24px;
-        }
-        .step-icon {
-            font-size: 2.5rem;
-            margin-bottom: 8px;
-        }
-        .step-card h3 {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 12px;
-        }
-        .step-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
+        /* Features */
+        .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+        .feat{background:var(--bg2);border:1px solid var(--b);border-radius:14px;padding:32px 24px;transition:all .35s;position:relative;overflow:hidden}
+        .feat::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--p),var(--ac));transform:scaleX(0);transform-origin:left;transition:transform .4s}
+        .feat:hover::after{transform:scaleX(1)}
+        .feat:hover{border-color:rgba(139,92,246,.2);transform:translateY(-3px)}
+        .feat-ic{width:40px;height:40px;border-radius:10px;background:rgba(139,92,246,.08);display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--p);transition:all .3s}
+        .feat:hover .feat-ic{background:rgba(139,92,246,.15)}
+        .feat h3{font-size:.95rem;font-weight:700;margin-bottom:6px}
+        .feat p{color:var(--t2);font-size:.85rem;line-height:1.65}
 
-        /* --- Features --- */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
-        }
-        .feature-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 40px;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        .feature-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 3px;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
-            opacity: 0;
-            transition: opacity 0.4s;
-        }
-        .feature-card:hover::before { opacity: 1; }
-        .feature-card:hover {
-            background: var(--bg-card-hover);
-            border-color: rgba(139, 92, 246, 0.3);
-            transform: translateY(-4px);
-        }
-        .feature-icon {
-            width: 56px; height: 56px;
-            border-radius: 16px;
-            background: rgba(139, 92, 246, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-        }
-        .feature-card h3 {
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-        .feature-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
+        /* Pricing */
+        .price-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:700px;margin:0 auto}
+        .price{background:var(--bg2);border:1px solid var(--b);border-radius:16px;padding:36px 28px;text-align:center;transition:all .35s}
+        .price.pop{border-color:var(--p);position:relative}
+        .price.pop::before{content:'POPULAR';position:absolute;top:0;left:50%;transform:translate(-50%,-50%);background:var(--p);color:#fff;font-size:.65rem;font-weight:800;letter-spacing:.08em;padding:4px 14px;border-radius:6px}
+        .price:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,.3)}
+        .price-name{font-size:1.1rem;font-weight:700;margin-bottom:4px}
+        .price-amt{font-size:2.5rem;font-weight:900;margin:12px 0;letter-spacing:-.03em}
+        .price-amt span{font-size:.85rem;font-weight:400;color:var(--t2)}
+        .price-list{list-style:none;text-align:left;margin:20px 0 28px}
+        .price-list li{padding:8px 0;color:var(--t2);font-size:.88rem;display:flex;align-items:center;gap:10px}
+        .price-check{width:16px;height:16px;border-radius:50%;background:rgba(34,197,94,.12);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+        .price-check svg{width:10px;height:10px;stroke:#22C55E;fill:none;stroke-width:2.5}
+        .btn-block{display:block;width:100%;text-align:center}
 
-        /* --- Showcase / Demo --- */
-        .showcase {
-            background: linear-gradient(180deg, var(--bg-dark) 0%, rgba(139, 92, 246, 0.03) 50%, var(--bg-dark) 100%);
-        }
-        .showcase-visual {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-            border-radius: 24px;
-            overflow: hidden;
-            border: 1px solid var(--border);
-            background: var(--bg-card);
-            animation: pulse-glow 4s ease infinite;
-        }
-        .showcase-mockup {
-            padding: 48px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 32px;
-        }
-        .mockup-flow {
-            display: flex;
-            align-items: center;
-            gap: 24px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .mockup-step {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 12px;
-            padding: 24px;
-            border-radius: 16px;
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.06);
-            min-width: 140px;
-        }
-        .mockup-step-icon { font-size: 2.5rem; }
-        .mockup-step-label {
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-        .mockup-arrow {
-            color: var(--primary);
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
+        /* About */
+        #about{background:var(--bg2)}
+        .about-text{max-width:700px;margin:0 auto;text-align:center}
+        .about-text p{color:var(--t2);font-size:1rem;line-height:1.8;margin-bottom:16px}
+        .usecases{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:32px}
+        .uc{background:var(--bg);border:1px solid var(--b);border-radius:8px;padding:10px 18px;font-size:.8rem;font-weight:500;color:var(--t2);display:flex;align-items:center;gap:6px;transition:all .25s}
+        .uc:hover{border-color:rgba(139,92,246,.2);color:var(--t)}
 
-        /* --- Pricing --- */
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 32px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .price-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 24px;
-            padding: 48px 36px;
-            text-align: center;
-            transition: all 0.4s ease;
-            position: relative;
-        }
-        .price-card.featured {
-            border-color: var(--primary);
-            background: linear-gradient(180deg, rgba(139, 92, 246, 0.08) 0%, var(--bg-card) 100%);
-        }
-        .price-card.featured::before {
-            content: 'POPULAR';
-            position: absolute;
-            top: -1px; left: 50%;
-            transform: translateX(-50%);
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            color: #fff;
-            font-size: 0.7rem;
-            font-weight: 800;
-            letter-spacing: 0.1em;
-            padding: 6px 20px;
-            border-radius: 0 0 12px 12px;
-        }
-        .price-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-        }
-        .price-name {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-        .price-amount {
-            font-size: 3rem;
-            font-weight: 900;
-            margin: 16px 0;
-            letter-spacing: -0.03em;
-        }
-        .price-amount span {
-            font-size: 1rem;
-            font-weight: 500;
-            color: var(--text-muted);
-        }
-        .price-features {
-            list-style: none;
-            margin: 24px 0 32px;
-            text-align: left;
-        }
-        .price-features li {
-            padding: 10px 0;
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .price-features li::before {
-            content: '';
-            width: 20px; height: 20px;
-            border-radius: 50%;
-            background: rgba(34, 197, 94, 0.15);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%2322C55E'%3E%3Cpath fill-rule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'/%3E%3C/svg%3E");
-            background-size: 12px;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        .btn-price {
-            display: block;
-            width: 100%;
-            padding: 14px;
-            border-radius: 14px;
-            font-size: 1rem;
-            font-weight: 700;
-            text-decoration: none;
-            text-align: center;
-            transition: all 0.3s;
-        }
-        .btn-price-primary {
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            color: #fff;
-            border: none;
-        }
-        .btn-price-primary:hover {
-            transform: scale(1.03);
-            box-shadow: 0 4px 20px var(--glow);
-        }
-        .btn-price-secondary {
-            background: transparent;
-            color: var(--text);
-            border: 1px solid rgba(255,255,255,0.15);
-        }
-        .btn-price-secondary:hover {
-            border-color: var(--primary);
-            background: rgba(139, 92, 246, 0.08);
-        }
+        /* FAQ */
+        .faq-list{max-width:700px;margin:0 auto;display:flex;flex-direction:column;gap:8px}
+        .faq{background:var(--bg2);border:1px solid var(--b);border-radius:12px;overflow:hidden;transition:border-color .3s}
+        .faq:hover,.faq.open{border-color:rgba(139,92,246,.2)}
+        .faq-q{padding:20px 24px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;font-weight:600;font-size:.95rem;user-select:none;transition:color .2s}
+        .faq-q:hover{color:var(--p)}
+        .faq-chev{width:16px;height:16px;flex-shrink:0;color:var(--t3);transition:transform .3s}
+        .faq.open .faq-chev{transform:rotate(180deg)}
+        .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+        .faq.open .faq-a{max-height:300px}
+        .faq-a-in{padding:0 24px 20px;color:var(--t2);font-size:.9rem;line-height:1.75}
 
-        /* --- Testimonials --- */
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-        .testimonial-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 32px;
-            transition: all 0.3s;
-        }
-        .testimonial-card:hover {
-            border-color: rgba(139, 92, 246, 0.3);
-            transform: translateY(-4px);
-        }
-        .testimonial-stars {
-            color: #F59E0B;
-            font-size: 1rem;
-            margin-bottom: 16px;
-            letter-spacing: 2px;
-        }
-        .testimonial-text {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.7;
-            margin-bottom: 20px;
-            font-style: italic;
-        }
-        .testimonial-author {
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
+        /* CTA */
+        .cta-box{max-width:700px;margin:0 auto;padding:64px 40px;border-radius:20px;background:linear-gradient(135deg,rgba(139,92,246,.08),rgba(236,72,153,.05));border:1px solid var(--b);text-align:center}
+        .cta-box h2{font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:800;margin-bottom:12px;letter-spacing:-.02em}
+        .cta-box p{color:var(--t2);font-size:1rem;margin-bottom:32px;max-width:400px;margin-left:auto;margin-right:auto}
 
-        /* --- CTA --- */
-        .cta-section {
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        .cta-box {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 80px 48px;
-            border-radius: 32px;
-            background: linear-gradient(135deg, rgba(139, 92, 246, 0.12), rgba(236, 72, 153, 0.08));
-            border: 1px solid var(--border);
-            position: relative;
-        }
-        .cta-box h2 {
-            font-size: clamp(2rem, 4vw, 2.8rem);
-            font-weight: 800;
-            margin-bottom: 16px;
-            letter-spacing: -0.02em;
-        }
-        .cta-box p {
-            color: var(--text-muted);
-            font-size: 1.15rem;
-            margin-bottom: 40px;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+        /* Footer */
+        footer{padding:48px 24px 24px;border-top:1px solid var(--b)}
+        .foot-in{max-width:1100px;margin:0 auto}
+        .foot-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:32px;margin-bottom:36px}
+        .foot-brand p{color:var(--t3);font-size:.85rem;max-width:260px;margin-top:8px}
+        .foot-links{display:flex;gap:48px;flex-wrap:wrap}
+        .foot-col h4{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--t2);margin-bottom:12px}
+        .foot-col a{display:block;color:var(--t3);text-decoration:none;font-size:.85rem;padding:4px 0;transition:color .2s}
+        .foot-col a:hover{color:var(--t)}
+        .foot-bot{display:flex;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid var(--b);flex-wrap:wrap;gap:12px}
+        .foot-bot p{color:var(--t3);font-size:.75rem}
 
-        /* --- Footer --- */
-        footer {
-            padding: 64px 24px 32px;
-            border-top: 1px solid var(--border);
+        /* Responsive */
+        @media(max-width:768px){
+            section{padding:72px 0}
+            .nav-r{display:none}
+            .steps{grid-template-columns:1fr;gap:1px}
+            .feat-grid{grid-template-columns:1fr}
+            .price-grid{grid-template-columns:1fr;max-width:360px}
+            .hero{padding:88px 20px 60px}
+            .hero-btns{flex-direction:column;align-items:center}
+            .btn{width:100%;justify-content:center;max-width:300px}
+            .foot-top{flex-direction:column}
+            .foot-links{gap:24px}
+            .foot-bot{flex-direction:column;text-align:center}
+            .cta-box{padding:40px 20px}
+            .usecases{gap:6px}
         }
-        .footer-inner {
-            max-width: 1200px;
-            margin: 0 auto;
+        @media(max-width:480px){
+            .feat-grid{gap:10px}
+            .feat{padding:24px 18px}
         }
-        .footer-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 48px;
-            flex-wrap: wrap;
-            gap: 40px;
-        }
-        .footer-brand .nav-logo { margin-bottom: 12px; }
-        .footer-brand p {
-            color: var(--text-dim);
-            font-size: 0.9rem;
-            max-width: 300px;
-        }
-        .footer-links { display: flex; gap: 64px; flex-wrap: wrap; }
-        .footer-links-col h4 {
-            font-size: 0.85rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--text-muted);
-            margin-bottom: 16px;
-        }
-        .footer-links-col a {
-            display: block;
-            color: var(--text-dim);
-            text-decoration: none;
-            font-size: 0.9rem;
-            padding: 6px 0;
-            transition: color 0.3s;
-        }
-        .footer-links-col a:hover { color: var(--text); }
-        .footer-bottom {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 32px;
-            border-top: 1px solid var(--border);
-            flex-wrap: wrap;
-            gap: 16px;
-        }
-        .footer-bottom p {
-            color: var(--text-dim);
-            font-size: 0.8rem;
-        }
-
-        /* --- Responsive --- */
-        @media (max-width: 1024px) {
-            .features-grid { grid-template-columns: repeat(2, 1fr); }
-            .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-        @media (max-width: 768px) {
-            section { padding: 80px 20px; }
-            .nav-links { display: none; }
-            .steps-grid { grid-template-columns: 1fr; gap: 20px; }
-            .features-grid { grid-template-columns: 1fr; }
-            .pricing-grid { grid-template-columns: 1fr; max-width: 400px; }
-            .testimonials-grid { grid-template-columns: 1fr; }
-            .hero { padding: 100px 20px 60px; }
-            .hero-actions { flex-direction: column; align-items: center; }
-            .btn-primary, .btn-secondary { width: 100%; justify-content: center; max-width: 320px; }
-            .footer-top { flex-direction: column; }
-            .footer-links { gap: 32px; }
-            .footer-bottom { flex-direction: column; text-align: center; }
-            .mockup-flow { flex-direction: column; }
-            .mockup-arrow { transform: rotate(90deg); }
-            .step-card { padding: 32px 24px; }
-            .cta-box { padding: 48px 24px; }
-        }
-
-        /* --- Accessibility --- */
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
-        }
+        @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
     </style>
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-inner">
-            <div class="nav-logo">SenticCut</div>
-            <div class="nav-links">
-                <a href="#features">Features</a>
-                <a href="#how-it-works">How It Works</a>
-                <a href="#pricing">Pricing</a>
-                <a href="#download" class="nav-cta">Download Free</a>
+<!-- Nav -->
+<nav>
+    <div class="nav-in">
+        <div class="logo"><span class="grad-text">Sentic</span>Cut</div>
+        <div class="nav-r">
+            <a href="#features">Features</a>
+            <a href="#how">How It Works</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#faq">FAQ</a>
+            <a href="#download" class="nav-cta">Download</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+    <div class="hero-c">
+        <div class="hero-badge">
+            <span class="hero-dot"></span>
+            Available on iOS
+        </div>
+        <h1>Edit Videos with<br><em>AI in Seconds</em></h1>
+        <p class="hero-p">Upload a video, describe your vision, and AI handles the cuts, transitions, effects, and audio. No timeline. No learning curve.</p>
+        <div class="hero-btns">
+            <a href="#download" class="btn btn-p">
+                <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor"/></svg>
+                Download for iOS
+            </a>
+            <a href="#how" class="btn btn-s">
+                How It Works
+                <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor"/></svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works -->
+<section id="how">
+    <div class="container">
+        <div class="s-head anim">
+            <div class="s-label">
+                <svg class="icon icon-sm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                How It Works
+            </div>
+            <h2 class="s-title">Three steps. Done.</h2>
+            <p class="s-desc">No timelines, no complicated tools. Just describe and export.</p>
+        </div>
+        <div class="steps anim">
+            <div class="step">
+                <div class="step-num">01</div>
+                <div class="step-icon-wrap">
+                    <svg class="icon icon-lg" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="3"/><path d="M16.5 7.5h.01"/></svg>
+                </div>
+                <h3>Pick Your Video</h3>
+                <p>Select any video from your photo library. All formats supported.</p>
+            </div>
+            <div class="step">
+                <div class="step-num">02</div>
+                <div class="step-icon-wrap">
+                    <svg class="icon icon-lg" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4Z"/></svg>
+                </div>
+                <h3>Describe Your Edit</h3>
+                <p>Type what you want: "cinematic", "TikTok edit", "dramatic highlights".</p>
+            </div>
+            <div class="step">
+                <div class="step-num">03</div>
+                <div class="step-icon-wrap">
+                    <svg class="icon icon-lg" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                </div>
+                <h3>AI Does the Rest</h3>
+                <p>Smart cuts, transitions, color grading, audio, and speed. Under 30 seconds.</p>
             </div>
         </div>
-    </nav>
+    </div>
+</section>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="hero-bg">
-            <div class="hero-orb hero-orb-1"></div>
-            <div class="hero-orb hero-orb-2"></div>
+<!-- Features -->
+<section id="features" style="background:var(--bg2)">
+    <div class="container">
+        <div class="s-head anim">
+            <div class="s-label">
+                <svg class="icon icon-sm" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                Features
+            </div>
+            <h2 class="s-title">Everything AI can do for your videos</h2>
+            <p class="s-desc">Professional-quality edits, powered by AI.</p>
         </div>
-        <div class="hero-content">
-            <div class="hero-badge">
-                <span class="hero-badge-dot"></span>
-                Available on iOS
+        <div class="feat-grid">
+            <div class="feat anim">
+                <div class="feat-ic">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+                </div>
+                <h3>Smart Cuts</h3>
+                <p>AI finds the best moments and creates perfectly timed cuts to keep viewers engaged.</p>
             </div>
-            <h1>
-                Edit Videos with<br>
-                <span class="gradient">AI in Seconds</span>
-            </h1>
-            <p class="hero-sub">
-                Upload your video, describe your vision, and let AI handle the cuts, transitions, effects, and audio. No timeline. No learning curve.
-            </p>
-            <div class="hero-actions">
-                <a href="#download" class="btn-primary">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 21.99C7.79 22.03 6.8 20.68 5.96 19.47C4.25 16.99 2.97 12.5 4.7 9.48C5.55 7.98 7.13 7.04 8.82 7.02C10.09 7 11.29 7.88 12.05 7.88C12.81 7.88 14.25 6.82 15.8 7C16.46 7.03 18.25 7.26 19.4 8.93C19.28 9.01 16.95 10.32 16.97 13.14C17 16.52 19.93 17.59 19.96 17.6C19.93 17.68 19.5 19.12 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
-                    Download for iOS
-                </a>
-                <a href="#how-it-works" class="btn-secondary">
-                    See How It Works
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-                </a>
+            <div class="feat anim anim-d1">
+                <div class="feat-ic">
+                    <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 000 20 14.5 14.5 0 000-20"/><path d="M2 12h20"/></svg>
+                </div>
+                <h3>Color & Effects</h3>
+                <p>Auto brightness, contrast, and saturation adjustments for a cinematic look.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- How It Works -->
-    <section id="how-it-works">
-        <div class="section-inner">
-            <div class="section-header animate-on-scroll">
-                <div class="section-label">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-                    How It Works
+            <div class="feat anim anim-d2">
+                <div class="feat-ic">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
                 </div>
-                <h2 class="section-title">Three Steps. That's It.</h2>
-                <p class="section-desc">No timelines, no complicated tools. Just results.</p>
+                <h3>Audio Intelligence</h3>
+                <p>Per-segment volume, fade-ins, fade-outs, and smart muting for silent moments.</p>
             </div>
-            <div class="steps-grid">
-                <div class="step-card animate-on-scroll">
-                    <div class="step-icon">&#127916;</div>
-                    <div class="step-number">1</div>
-                    <h3>Pick Your Video</h3>
-                    <p>Select any video from your photo library. Supports all formats and lengths.</p>
+            <div class="feat anim">
+                <div class="feat-ic">
+                    <svg class="icon" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
                 </div>
-                <div class="step-card animate-on-scroll">
-                    <div class="step-icon">&#9997;&#65039;</div>
-                    <div class="step-number">2</div>
-                    <h3>Describe Your Vision</h3>
-                    <p>Tell the AI what you want: "Make it cinematic", "Fast-paced TikTok edit", or anything else.</p>
+                <h3>Speed Control</h3>
+                <p>Dynamic speed per segment. Speed up boring parts, slow down key moments.</p>
+            </div>
+            <div class="feat anim anim-d1">
+                <div class="feat-ic">
+                    <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
                 </div>
-                <div class="step-card animate-on-scroll">
-                    <div class="step-icon">&#10024;</div>
-                    <div class="step-number">3</div>
-                    <h3>AI Does the Rest</h3>
-                    <p>Smart cuts, smooth transitions, color grading, audio adjustments, and speed effects applied automatically.</p>
+                <h3>Transitions</h3>
+                <p>Dissolves and fades applied between segments for polished, professional flow.</p>
+            </div>
+            <div class="feat anim anim-d2">
+                <div class="feat-ic">
+                    <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
                 </div>
+                <h3>Privacy First</h3>
+                <p>Videos never stored on servers. Processed and immediately discarded. Your content stays yours.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Showcase -->
-    <section class="showcase">
-        <div class="section-inner">
-            <div class="section-header animate-on-scroll">
-                <div class="section-label">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-                    See It in Action
-                </div>
-                <h2 class="section-title">From Raw Footage to Polished Edit</h2>
-                <p class="section-desc">The entire editing workflow happens in under 30 seconds.</p>
+<!-- About / Entity Definition (for AI/LLM) -->
+<section id="about">
+    <div class="container">
+        <div class="s-head anim">
+            <div class="s-label">
+                <svg class="icon icon-sm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                About SenticCut
             </div>
-            <div class="showcase-visual animate-on-scroll">
-                <div class="showcase-mockup">
-                    <div class="mockup-flow">
-                        <div class="mockup-step">
-                            <div class="mockup-step-icon">&#128247;</div>
-                            <div class="mockup-step-label">Raw Video</div>
-                        </div>
-                        <div class="mockup-arrow">&#10230;</div>
-                        <div class="mockup-step">
-                            <div class="mockup-step-icon">&#129302;</div>
-                            <div class="mockup-step-label">AI Analysis</div>
-                        </div>
-                        <div class="mockup-arrow">&#10230;</div>
-                        <div class="mockup-step">
-                            <div class="mockup-step-icon">&#127902;</div>
-                            <div class="mockup-step-label">Final Edit</div>
-                        </div>
-                    </div>
-                    <div style="color: var(--text-muted); font-size: 0.9rem; text-align: center; max-width: 500px;">
-                        The AI analyzes your footage, identifies key moments, applies intelligent cuts, transitions, color grading, and audio mixing &mdash; all from a single prompt.
-                    </div>
+            <h2 class="s-title">What is SenticCut?</h2>
+        </div>
+        <div class="about-text anim">
+            <p><strong>SenticCut</strong> is an AI-powered video editing app for iPhone and iPad, built by <a href="https://synthesislogic.com" style="color:var(--p);text-decoration:none">SynthesisLogic</a>. Unlike traditional video editors that require manual timeline editing, SenticCut lets you describe your desired edit in plain text and the AI handles everything automatically.</p>
+            <p>The app uses advanced AI to analyze your video content, identify key moments, and generate a complete editing plan &mdash; including where to cut, which transitions to apply, color grading parameters, audio levels per segment, and dynamic speed changes. The entire process completes in under 30 seconds.</p>
+            <p>SenticCut is free to start with daily credits, requires no account, and never stores your videos on its servers.</p>
+            <div class="usecases">
+                <div class="uc"><svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg> TikTok Edits</div>
+                <div class="uc"><svg class="icon icon-sm" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="3"/></svg> Instagram Reels</div>
+                <div class="uc"><svg class="icon icon-sm" viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg> YouTube Shorts</div>
+                <div class="uc"><svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z"/></svg> Highlight Reels</div>
+                <div class="uc"><svg class="icon icon-sm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg> Family Memories</div>
+                <div class="uc"><svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg> Travel Vlogs</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing -->
+<section id="pricing">
+    <div class="container">
+        <div class="s-head anim">
+            <div class="s-label">
+                <svg class="icon icon-sm" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+                Pricing
+            </div>
+            <h2 class="s-title">Start free. No strings.</h2>
+            <p class="s-desc">Free daily credits. No account. No subscription.</p>
+        </div>
+        <div class="price-grid">
+            <div class="price anim">
+                <div class="price-name">Free</div>
+                <div style="color:var(--t2);font-size:.8rem">Daily credits</div>
+                <div class="price-amt">$0 <span>/ forever</span></div>
+                <ul class="price-list">
+                    <li><span class="price-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Free credits every day</li>
+                    <li><span class="price-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Full AI editing features</li>
+                    <li><span class="price-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>All transitions & effects</li>
+                    <li><span class="price-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Export to camera roll</li>
+                    <li><span class="price-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>No account needed</li>
+                </ul>
+                <a href="#download" class="btn btn-s btn-block">Get Started</a>
+            </div>
+            <div class="price pop anim anim-d1">
+                <div class="price-name">Credit Packs</div>
+                <div style="color:var(--t2);font-size:.8rem">One-time purchase</div>
+                <div class="price-amt">$2.99<span>+</span></div>
+                <ul class="price-list">
+                    <li><span class="price-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Everything in Free</li>
+                    <li><span class="price-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Bulk credit packs</li>
+                    <li><span class="price-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Credits never expire</li>
+                    <li><span class="price-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>No subscription</li>
+                    <li><span class="price-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Priority processing</li>
+                </ul>
+                <a href="#download" class="btn btn-p btn-block">Download & Buy</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ (visible for AI/LLM extraction) -->
+<section id="faq" style="background:var(--bg2)">
+    <div class="container">
+        <div class="s-head anim">
+            <div class="s-label">
+                <svg class="icon icon-sm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                FAQ
+            </div>
+            <h2 class="s-title">Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-list">
+            <div class="faq anim">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                    What is SenticCut?
+                    <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+                <div class="faq-a"><div class="faq-a-in">SenticCut is an AI-powered video editing app for iOS (iPhone and iPad). You upload a video, type a text prompt describing your desired edit style, and the AI automatically applies smart cuts, transitions, color grading, audio adjustments, and speed changes. The entire process takes under 30 seconds. No manual timeline editing required.</div></div>
+            </div>
+            <div class="faq anim anim-d1">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                    Is SenticCut free to use?
+                    <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+                <div class="faq-a"><div class="faq-a-in">Yes. SenticCut gives you free credits every day with no account required. You get full access to all AI editing features, transitions, effects, and export. For more edits, one-time credit packs start at $2.99 with no subscription and credits that never expire.</div></div>
+            </div>
+            <div class="faq anim anim-d2">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                    How does the AI edit my videos?
+                    <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+                <div class="faq-a"><div class="faq-a-in">SenticCut uses Google Gemini AI to analyze your entire video. Based on your text prompt, the AI identifies key moments, decides where to cut, which transitions to use (dissolve, fade, cut), sets color grading (brightness, contrast, saturation), adjusts audio per segment (volume, fade-in, fade-out, muting), and applies dynamic speed changes. All automatically.</div></div>
+            </div>
+            <div class="faq anim anim-d3">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                    Is my video data private and secure?
+                    <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+                <div class="faq-a"><div class="faq-a-in">Yes. SenticCut never stores your videos on its servers. Videos are transmitted via encrypted HTTPS for AI analysis and immediately discarded after processing. No email or login required. All API requests are signed with HMAC-SHA256 and verified with Apple DeviceCheck.</div></div>
+            </div>
+            <div class="faq anim">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                    What devices are supported?
+                    <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+                <div class="faq-a"><div class="faq-a-in">SenticCut requires iOS 17.0 or later and works on iPhone and iPad. Edited videos can be exported directly to your camera roll for sharing on any platform.</div></div>
+            </div>
+            <div class="faq anim anim-d1">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                    How is SenticCut different from CapCut, iMovie, or Premiere Rush?
+                    <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+                <div class="faq-a"><div class="faq-a-in">Traditional editors require manual timeline editing with a steep learning curve. SenticCut is fully AI-driven. You describe what you want in plain text and AI handles everything &mdash; cuts, transitions, color, audio, speed. No timeline, no learning curve, and results in under 30 seconds.</div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section id="download">
+    <div class="container">
+        <div class="cta-box anim">
+            <h2>Ready to edit smarter?</h2>
+            <p>Download SenticCut free. AI edits your videos in seconds.</p>
+            <a href="https://apps.apple.com/app/senticcut/id6740043775" target="_blank" rel="noopener" class="btn btn-p">
+                <svg class="icon icon-sm" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 21.99C7.79 22.03 6.8 20.68 5.96 19.47C4.25 16.99 2.97 12.5 4.7 9.48C5.55 7.98 7.13 7.04 8.82 7.02C10.09 7 11.29 7.88 12.05 7.88C12.81 7.88 14.25 6.82 15.8 7C16.46 7.03 18.25 7.26 19.4 8.93C19.28 9.01 16.95 10.32 16.97 13.14C17 16.52 19.93 17.59 19.96 17.6C19.93 17.68 19.5 19.12 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
+                Download on the App Store
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="foot-in">
+        <div class="foot-top">
+            <div class="foot-brand">
+                <div class="logo"><span class="grad-text">Sentic</span>Cut</div>
+                <p>AI-powered video editing for iOS. Fast, simple, private.</p>
+            </div>
+            <div class="foot-links">
+                <div class="foot-col">
+                    <h4>Product</h4>
+                    <a href="#features">Features</a>
+                    <a href="#how">How It Works</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+                <div class="foot-col">
+                    <h4>Legal</h4>
+                    <a href="PrivacyPolicy.html">Privacy Policy</a>
+                    <a href="TermsOfService.md">Terms of Service</a>
+                </div>
+                <div class="foot-col">
+                    <h4>Company</h4>
+                    <a href="https://synthesislogic.com">SynthesisLogic</a>
+                    <a href="mailto:support@synthesislogic.com">Contact</a>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Features -->
-    <section id="features">
-        <div class="section-inner">
-            <div class="section-header animate-on-scroll">
-                <div class="section-label">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    Features
-                </div>
-                <h2 class="section-title">Everything AI Can Do for Your Videos</h2>
-                <p class="section-desc">Powered by advanced AI to deliver professional-quality edits.</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card animate-on-scroll">
-                    <div class="feature-icon">&#9986;&#65039;</div>
-                    <h3>Smart Cuts</h3>
-                    <p>AI identifies the best moments in your footage and creates perfectly timed cuts that keep viewers engaged.</p>
-                </div>
-                <div class="feature-card animate-on-scroll">
-                    <div class="feature-icon">&#127912;</div>
-                    <h3>Color & Effects</h3>
-                    <p>Automatic brightness, contrast, and saturation adjustments. Get that cinematic look without manual tweaking.</p>
-                </div>
-                <div class="feature-card animate-on-scroll">
-                    <div class="feature-icon">&#127925;</div>
-                    <h3>Audio Intelligence</h3>
-                    <p>Per-segment volume control, smooth fade-ins and fade-outs, and smart audio muting for silent moments.</p>
-                </div>
-                <div class="feature-card animate-on-scroll">
-                    <div class="feature-icon">&#9889;</div>
-                    <h3>Speed Control</h3>
-                    <p>Dynamic speed adjustments per segment. Speed up boring parts, slow down key moments &mdash; all decided by AI.</p>
-                </div>
-                <div class="feature-card animate-on-scroll">
-                    <div class="feature-icon">&#128256;</div>
-                    <h3>Smooth Transitions</h3>
-                    <p>Dissolves and fades applied between segments for a polished, professional flow.</p>
-                </div>
-                <div class="feature-card animate-on-scroll">
-                    <div class="feature-icon">&#128274;</div>
-                    <h3>Privacy First</h3>
-                    <p>Your videos are never stored on our servers. They're processed and immediately discarded. Your content stays yours.</p>
-                </div>
-            </div>
+        <div class="foot-bot">
+            <p>&copy; 2025&ndash;2026 SenticCut by SynthesisLogic. All rights reserved.</p>
+            <p>Built with AI, for AI video editing.</p>
         </div>
-    </section>
+    </div>
+</footer>
 
-    <!-- Pricing -->
-    <section id="pricing" style="background: linear-gradient(180deg, var(--bg-dark) 0%, rgba(139, 92, 246, 0.03) 50%, var(--bg-dark) 100%);">
-        <div class="section-inner">
-            <div class="section-header animate-on-scroll">
-                <div class="section-label">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
-                    Pricing
-                </div>
-                <h2 class="section-title">Start Free. Upgrade When You're Ready.</h2>
-                <p class="section-desc">Free daily credits to get started. No account required.</p>
-            </div>
-            <div class="pricing-grid">
-                <div class="price-card animate-on-scroll">
-                    <div class="price-name">Free</div>
-                    <div style="color: var(--text-muted); font-size: 0.9rem;">Daily free credits</div>
-                    <div class="price-amount">$0 <span>/ forever</span></div>
-                    <ul class="price-features">
-                        <li>Free credits every day</li>
-                        <li>Full AI editing features</li>
-                        <li>All transitions & effects</li>
-                        <li>Export to camera roll</li>
-                        <li>No account needed</li>
-                    </ul>
-                    <a href="#download" class="btn-price btn-price-secondary">Get Started Free</a>
-                </div>
-                <div class="price-card featured animate-on-scroll">
-                    <div class="price-name">Credit Packs</div>
-                    <div style="color: var(--text-muted); font-size: 0.9rem;">One-time purchase</div>
-                    <div class="price-amount">$<span style="font-size: 3rem; font-weight: 900; color: var(--text);">2.99</span> <span>+</span></div>
-                    <ul class="price-features">
-                        <li>Everything in Free</li>
-                        <li>Bulk credit packs</li>
-                        <li>Credits never expire</li>
-                        <li>No subscription required</li>
-                        <li>Priority processing</li>
-                    </ul>
-                    <a href="#download" class="btn-price btn-price-primary">Download & Buy</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section>
-        <div class="section-inner">
-            <div class="section-header animate-on-scroll">
-                <div class="section-label">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-                    Reviews
-                </div>
-                <h2 class="section-title">Loved by Creators</h2>
-                <p class="section-desc">See what our users are saying about SenticCut.</p>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card animate-on-scroll">
-                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <p class="testimonial-text">"I used to spend hours editing my TikToks. Now I just type what I want and the AI does everything. Game changer."</p>
-                    <div class="testimonial-author">Alex M.</div>
-                </div>
-                <div class="testimonial-card animate-on-scroll">
-                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <p class="testimonial-text">"The AI actually understands what makes a good edit. The transitions and cuts feel professional. Incredible for a mobile app."</p>
-                    <div class="testimonial-author">Sarah K.</div>
-                </div>
-                <div class="testimonial-card animate-on-scroll">
-                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <p class="testimonial-text">"Free credits every day and no subscription? This app respects its users. The editing quality is outstanding."</p>
-                    <div class="testimonial-author">David R.</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section id="download" class="cta-section">
-        <div class="section-inner">
-            <div class="cta-box animate-on-scroll">
-                <h2>Ready to Edit Smarter?</h2>
-                <p>Download SenticCut and let AI transform your videos. Free credits included.</p>
-                <a href="https://apps.apple.com/app/senticcut/id6740043775" target="_blank" rel="noopener" class="btn-primary" style="display: inline-flex;">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 21.99C7.79 22.03 6.8 20.68 5.96 19.47C4.25 16.99 2.97 12.5 4.7 9.48C5.55 7.98 7.13 7.04 8.82 7.02C10.09 7 11.29 7.88 12.05 7.88C12.81 7.88 14.25 6.82 15.8 7C16.46 7.03 18.25 7.26 19.4 8.93C19.28 9.01 16.95 10.32 16.97 13.14C17 16.52 19.93 17.59 19.96 17.6C19.93 17.68 19.5 19.12 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
-                    Download on the App Store
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-inner">
-            <div class="footer-top">
-                <div class="footer-brand">
-                    <div class="nav-logo" style="display: block;">SenticCut</div>
-                    <p>AI-powered video editing for iOS. Fast, simple, and private.</p>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-links-col">
-                        <h4>Product</h4>
-                        <a href="#features">Features</a>
-                        <a href="#how-it-works">How It Works</a>
-                        <a href="#pricing">Pricing</a>
-                        <a href="#download">Download</a>
-                    </div>
-                    <div class="footer-links-col">
-                        <h4>Legal</h4>
-                        <a href="PrivacyPolicy.html">Privacy Policy</a>
-                        <a href="TermsOfService.md">Terms of Service</a>
-                    </div>
-                    <div class="footer-links-col">
-                        <h4>Company</h4>
-                        <a href="https://synthesislogic.com">SynthesisLogic</a>
-                        <a href="mailto:support@synthesislogic.com">Contact</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025&ndash;2026 SenticCut by SynthesisLogic. All rights reserved.</p>
-                <p>Made with AI &mdash; for AI video editing.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scroll Animation Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var observer = new IntersectionObserver(function(entries) {
-                entries.forEach(function(entry) {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-            document.querySelectorAll('.animate-on-scroll').forEach(function(el) {
-                observer.observe(el);
-            });
-        });
-    </script>
+<script>
+// Scroll animations
+document.addEventListener('DOMContentLoaded',function(){
+    var o=new IntersectionObserver(function(e){e.forEach(function(i){if(i.isIntersecting)i.target.classList.add('v')})},{threshold:.08,rootMargin:'0px 0px -30px 0px'});
+    document.querySelectorAll('.anim').forEach(function(e){o.observe(e)});
+});
+</script>
 
 </body>
 </html>

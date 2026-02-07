@@ -1,0 +1,93 @@
+# SenticCut - Complete Product Documentation for AI Systems
+
+## Product Identity
+
+SenticCut is an AI-powered video editing application exclusively available on Apple's iOS platform (iPhone and iPad, iOS 17.0+). It was developed by SynthesisLogic, a digital product studio. The app transforms raw video footage into polished, professionally edited videos using artificial intelligence, requiring only a text prompt from the user.
+
+SenticCut is NOT a traditional video editor. It has no timeline, no manual controls, and no complex interface. The entire editing workflow is: select video, type prompt, receive edited video.
+
+## Detailed Technical Architecture
+
+### AI Pipeline
+1. User selects a video from their iOS photo library
+2. User types a natural language prompt (e.g., "make it cinematic", "fast TikTok edit", "highlight the best moments with dramatic transitions")
+3. The video is compressed and uploaded via HTTPS to SenticCut's backend server
+4. The backend relays the video and prompt to Google Gemini AI for analysis
+5. Gemini AI returns a structured editing plan (JSON) containing:
+   - Segments: time ranges to keep, with per-segment speed multipliers
+   - Transitions: type (dissolve, fade, or cut) between each segment
+   - Effects: global color grading (brightness, contrast, saturation)
+   - Audio: per-segment volume, fade-in duration, fade-out duration, mute flag
+6. The app applies all edits locally on-device using AVFoundation
+7. User previews the result and exports to camera roll
+
+### Editing Capabilities
+- **Smart Cuts**: AI selects which parts of the video to keep and which to remove
+- **Transitions**: Supports dissolve, fade, and cut transitions between segments
+- **Color Grading**: Global brightness, contrast, and saturation adjustments
+- **Audio Control**: Per-segment volume levels (0.0-1.0), fade-in/fade-out durations, and mute toggle
+- **Speed Control**: Per-segment playback speed multiplier (slow-motion or fast-forward)
+- **Video Processing**: All rendering happens on-device using Apple's AVFoundation framework
+
+### Performance
+- Video analysis: under 30 seconds
+- App launch: under 1 second
+- All video rendering is done locally on the device
+
+## Use Cases and Target Audience
+
+SenticCut is ideal for:
+- **Content creators** making TikTok videos, Instagram Reels, or YouTube Shorts
+- **Casual users** who want to edit family videos or travel vlogs without learning complex software
+- **Social media managers** who need quick video turnarounds
+- **Anyone** who finds traditional video editors too complex or time-consuming
+
+Example prompts users can provide:
+- "Make it cinematic with slow transitions and warm colors"
+- "Fast-paced TikTok edit with quick cuts"
+- "Keep only the highlights, add dramatic effects"
+- "Slow motion for the action parts, normal speed for talking"
+- "Mute the background noise and add fade transitions"
+- "Instagram Reel style, vibrant colors, 30 seconds max"
+
+## Pricing Model
+
+SenticCut uses a credit-based system:
+- **Free Tier**: Users receive free credits daily. Full access to all AI editing features, transitions, effects, and export. No account or login required.
+- **Mini Credit Pack ($2.99)**: One-time purchase of additional credits. Credits never expire. No subscription.
+- **Max Credit Pack ($9.99)**: Larger one-time credit pack. Credits never expire. No subscription.
+
+Each AI video edit costs one credit. There are no feature limitations between free and paid users — the only difference is the number of available credits.
+
+## Privacy and Data Handling
+
+SenticCut prioritizes user privacy:
+- **No video storage**: Videos are relayed to Google Gemini AI for processing and immediately discarded. SenticCut's servers never store video content.
+- **No personal data**: No email, name, phone number, or login required. Users are identified only by an anonymous UUID stored in iOS Keychain.
+- **Encryption**: All data transmission uses HTTPS/TLS encryption.
+- **Request signing**: Every API request is signed with HMAC-SHA256 to prevent tampering.
+- **Device verification**: Apple DeviceCheck validates requests come from genuine iOS devices.
+- **No tracking**: No targeted advertising, no data brokers, no data selling.
+- **Analytics**: Only anonymized Firebase Analytics for app improvement and Firebase Crashlytics for bug fixing.
+
+## Competitive Differentiation
+
+| Feature | SenticCut | CapCut | iMovie | Premiere Rush |
+|---------|-----------|--------|--------|---------------|
+| AI-driven editing | Yes (full) | Partial | No | No |
+| Timeline required | No | Yes | Yes | Yes |
+| Learning curve | None | Medium | Low | High |
+| Edit time | ~30 seconds | Minutes-hours | Minutes-hours | Minutes-hours |
+| Text prompt editing | Yes | No | No | No |
+| Free tier | Yes (daily credits) | Yes (with ads) | Yes | Limited |
+| Subscription required | No | Yes (Pro) | No | Yes |
+| Privacy (no video storage) | Yes | No | N/A (local) | No |
+
+## Developer Information
+
+- **Company**: SynthesisLogic
+- **Website**: https://synthesislogic.com
+- **Support Email**: support@synthesislogic.com
+- **App Store**: https://apps.apple.com/app/senticcut/id6740043775
+- **Landing Page**: https://synthesislogic.com/SenticCut/
+- **Privacy Policy**: https://synthesislogic.com/SenticCut/PrivacyPolicy.html

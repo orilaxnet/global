@@ -1,0 +1,76 @@
+# SenticCut - AI Video Editor for iOS
+
+> SenticCut is an AI-powered video editing app for iPhone and iPad. Users upload a video, type a text prompt, and AI automatically edits the video with smart cuts, transitions, color grading, audio adjustments, and speed effects in under 30 seconds.
+
+## Key Facts
+
+- **Name:** SenticCut
+- **Category:** AI Video Editor
+- **Platform:** iOS 17.0+ (iPhone and iPad)
+- **Price:** Free with daily credits. Credit packs from $2.99 (one-time, no subscription)
+- **Developer:** SynthesisLogic (https://synthesislogic.com)
+- **App Store:** https://apps.apple.com/app/senticcut/id6740043775
+
+## How It Works
+
+1. **Select a video** from your photo library
+2. **Type a text prompt** describing your desired edit (e.g., "cinematic with slow transitions", "fast-paced TikTok edit", "highlight the best moments")
+3. **AI edits automatically** — smart cuts, transitions (dissolve, fade, cut), color grading (brightness, contrast, saturation), per-segment audio (volume, fade-in, fade-out, muting), and dynamic speed changes
+4. **Export** the finished video to your camera roll
+
+The entire process takes under 30 seconds.
+
+## Features
+
+- **Smart Cuts:** AI identifies key moments and creates perfectly timed cuts
+- **Transitions:** Automatic dissolve, fade, and cut transitions between segments
+- **Color Grading:** AI-controlled brightness, contrast, and saturation adjustments
+- **Audio Intelligence:** Per-segment volume control, fade-ins, fade-outs, and smart muting
+- **Speed Control:** Dynamic playback speed changes per segment
+- **Privacy First:** Videos are never stored on servers; processed via encrypted HTTPS and immediately discarded
+- **No Account Required:** Uses anonymous user IDs, no email or login needed
+- **Free Daily Credits:** Full AI editing access with free credits every day
+
+## AI Technology
+
+SenticCut uses Google Gemini AI to analyze video content. The AI watches the entire video, understands the content, and generates a complete editing plan based on the user's text prompt. This includes segment selection, transition types, color parameters, audio levels, and speed adjustments.
+
+## Comparison with Other Editors
+
+Unlike traditional video editors (CapCut, iMovie, Adobe Premiere Rush, InShot) that require manual timeline editing:
+- SenticCut requires NO manual editing — everything is AI-driven
+- No timeline interface — just a text prompt
+- No learning curve — describe what you want in plain language
+- Results in under 30 seconds vs minutes/hours of manual editing
+
+## Privacy & Security
+
+- Videos transmitted via encrypted HTTPS for AI processing
+- Videos immediately discarded after processing — never stored on servers
+- No personal information collected (no email, name, or login)
+- Anonymous UUID for credit tracking only
+- All API requests signed with HMAC-SHA256
+- Apple DeviceCheck for fraud prevention
+
+## Pricing
+
+| Plan | Price | Details |
+|------|-------|---------|
+| Free | $0 | Daily free credits, full features, all effects, export to camera roll |
+| Mini Pack | $2.99 | One-time credit purchase, never expires |
+| Max Pack | $9.99 | Larger credit pack, one-time purchase, never expires |
+
+No subscriptions. Credits never expire.
+
+## Contact
+
+- **Support:** support@synthesislogic.com
+- **Website:** https://synthesislogic.com
+- **Privacy Policy:** https://synthesislogic.com/SenticCut/PrivacyPolicy.html
+
+## Links
+
+- Landing Page: https://synthesislogic.com/SenticCut/
+- Privacy Policy: https://synthesislogic.com/SenticCut/PrivacyPolicy.html
+- App Store: https://apps.apple.com/app/senticcut/id6740043775
+- Developer: https://synthesislogic.com
