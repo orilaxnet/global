@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SenticCut - AI Video Editor | Edit Videos with AI in Seconds</title>
+    <meta name="description" content="SenticCut is the fastest AI-powered video editor for iOS. Upload your video, describe your vision, and let AI handle the rest. Free to start.">
+    <meta name="keywords" content="AI video editor, video editing app, iOS video editor, automatic video editing, AI video maker, SenticCut, mobile video editor">
+    <meta name="author" content="SynthesisLogic">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://synthesislogic.com/SenticCut/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SenticCut - AI Video Editor">
+    <meta property="og:description" content="Upload your video, describe your vision, and let AI edit it in seconds. The fastest way to create stunning videos on iOS.">
+    <meta property="og:url" content="https://synthesislogic.com/SenticCut/">
+    <meta property="og:site_name" content="SenticCut">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SenticCut - AI Video Editor">
+    <meta name="twitter:description" content="Upload your video, describe your vision, and let AI edit it in seconds.">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MobileApplication",
+        "name": "SenticCut",
+        "operatingSystem": "iOS",
+        "applicationCategory": "MultimediaApplication",
+        "description": "AI-powered video editor. Upload your video, describe your vision, and let AI handle the editing — cuts, transitions, effects, audio, and speed adjustments.",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "SynthesisLogic",
+            "url": "https://synthesislogic.com"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "120"
+        }
+    }
+    </script>
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary: #8B5CF6;
+            --primary-dark: #7C3AED;
+            --accent: #EC4899;
+            --bg-dark: #0A0A0F;
+            --bg-card: #13131A;
+            --bg-card-hover: #1A1A25;
+            --text: #F8FAFC;
+            --text-muted: #94A3B8;
+            --text-dim: #64748B;
+            --border: rgba(139, 92, 246, 0.15);
+            --glow: rgba(139, 92, 246, 0.4);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* --- Animations --- */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px var(--glow), 0 0 60px rgba(139, 92, 246, 0.15); }
+            50% { box-shadow: 0 0 40px var(--glow), 0 0 100px rgba(139, 92, 246, 0.25); }
+        }
+        @keyframes gradient-shift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        @keyframes orbit {
+            from { transform: rotate(0deg) translateX(200px) rotate(0deg); }
+            to { transform: rotate(360deg) translateX(200px) rotate(-360deg); }
+        }
+        @keyframes spin-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- Nav --- */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            background: rgba(10, 10, 15, 0.8);
+            border-bottom: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.02em;
+        }
+        .nav-links { display: flex; gap: 32px; align-items: center; }
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--text); }
+        .nav-cta {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: #fff !important;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 600 !important;
+            transition: transform 0.3s, box-shadow 0.3s !important;
+        }
+        .nav-cta:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px var(--glow);
+        }
+
+        /* --- Hero --- */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 120px 24px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(ellipse at 30% 20%, rgba(139, 92, 246, 0.12) 0%, transparent 60%),
+                        radial-gradient(ellipse at 70% 80%, rgba(236, 72, 153, 0.08) 0%, transparent 60%);
+            animation: spin-slow 60s linear infinite;
+        }
+        .hero-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.3;
+        }
+        .hero-orb-1 {
+            width: 400px; height: 400px;
+            background: var(--primary);
+            top: 10%; left: 10%;
+            animation: float 8s ease-in-out infinite;
+        }
+        .hero-orb-2 {
+            width: 300px; height: 300px;
+            background: var(--accent);
+            bottom: 10%; right: 10%;
+            animation: float 6s ease-in-out infinite 2s;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            animation: fadeUp 1s ease;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 20px;
+            border-radius: 50px;
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid var(--border);
+            color: var(--primary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 32px;
+            animation: fadeIn 1s ease 0.2s both;
+        }
+        .hero-badge-dot {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            background: #22C55E;
+            animation: pulse-glow 2s ease infinite;
+            box-shadow: 0 0 8px #22C55E;
+        }
+        .hero h1 {
+            font-size: clamp(2.8rem, 7vw, 5rem);
+            font-weight: 900;
+            line-height: 1.05;
+            letter-spacing: -0.03em;
+            margin-bottom: 24px;
+            animation: fadeUp 1s ease 0.3s both;
+        }
+        .hero h1 .gradient {
+            background: linear-gradient(135deg, var(--primary), var(--accent), #F59E0B);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradient-shift 4s ease infinite;
+        }
+        .hero-sub {
+            font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+            color: var(--text-muted);
+            max-width: 640px;
+            margin: 0 auto 48px;
+            font-weight: 400;
+            line-height: 1.7;
+            animation: fadeUp 1s ease 0.5s both;
+        }
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeUp 1s ease 0.7s both;
+        }
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 36px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-decoration: none;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-primary::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+            animation: shimmer 3s infinite;
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 8px 40px var(--glow);
+        }
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 36px;
+            background: transparent;
+            color: var(--text);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 50px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .btn-secondary:hover {
+            border-color: var(--primary);
+            background: rgba(139, 92, 246, 0.08);
+        }
+
+        /* --- Section --- */
+        section { padding: 120px 24px; }
+        .section-inner { max-width: 1200px; margin: 0 auto; }
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary);
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 16px;
+        }
+        .section-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+            line-height: 1.15;
+        }
+        .section-desc {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            line-height: 1.7;
+        }
+        .section-header { text-align: center; margin-bottom: 72px; }
+        .section-header .section-desc { margin: 0 auto; }
+
+        /* --- How It Works --- */
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            position: relative;
+        }
+        .step-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 48px 32px;
+            text-align: center;
+            position: relative;
+            transition: all 0.4s ease;
+        }
+        .step-card:hover {
+            background: var(--bg-card-hover);
+            border-color: rgba(139, 92, 246, 0.3);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        .step-number {
+            width: 64px; height: 64px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin: 0 auto 24px;
+        }
+        .step-icon {
+            font-size: 2.5rem;
+            margin-bottom: 8px;
+        }
+        .step-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .step-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* --- Features --- */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+        .feature-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 40px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+        .feature-card:hover::before { opacity: 1; }
+        .feature-card:hover {
+            background: var(--bg-card-hover);
+            border-color: rgba(139, 92, 246, 0.3);
+            transform: translateY(-4px);
+        }
+        .feature-icon {
+            width: 56px; height: 56px;
+            border-radius: 16px;
+            background: rgba(139, 92, 246, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        .feature-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* --- Showcase / Demo --- */
+        .showcase {
+            background: linear-gradient(180deg, var(--bg-dark) 0%, rgba(139, 92, 246, 0.03) 50%, var(--bg-dark) 100%);
+        }
+        .showcase-visual {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 24px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            background: var(--bg-card);
+            animation: pulse-glow 4s ease infinite;
+        }
+        .showcase-mockup {
+            padding: 48px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 32px;
+        }
+        .mockup-flow {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .mockup-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            padding: 24px;
+            border-radius: 16px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            min-width: 140px;
+        }
+        .mockup-step-icon { font-size: 2.5rem; }
+        .mockup-step-label {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .mockup-arrow {
+            color: var(--primary);
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        /* --- Pricing --- */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .price-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 48px 36px;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+        .price-card.featured {
+            border-color: var(--primary);
+            background: linear-gradient(180deg, rgba(139, 92, 246, 0.08) 0%, var(--bg-card) 100%);
+        }
+        .price-card.featured::before {
+            content: 'POPULAR';
+            position: absolute;
+            top: -1px; left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: #fff;
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            padding: 6px 20px;
+            border-radius: 0 0 12px 12px;
+        }
+        .price-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        .price-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .price-amount {
+            font-size: 3rem;
+            font-weight: 900;
+            margin: 16px 0;
+            letter-spacing: -0.03em;
+        }
+        .price-amount span {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+        .price-features {
+            list-style: none;
+            margin: 24px 0 32px;
+            text-align: left;
+        }
+        .price-features li {
+            padding: 10px 0;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .price-features li::before {
+            content: '';
+            width: 20px; height: 20px;
+            border-radius: 50%;
+            background: rgba(34, 197, 94, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%2322C55E'%3E%3Cpath fill-rule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'/%3E%3C/svg%3E");
+            background-size: 12px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .btn-price {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            border-radius: 14px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .btn-price-primary {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: #fff;
+            border: none;
+        }
+        .btn-price-primary:hover {
+            transform: scale(1.03);
+            box-shadow: 0 4px 20px var(--glow);
+        }
+        .btn-price-secondary {
+            background: transparent;
+            color: var(--text);
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+        .btn-price-secondary:hover {
+            border-color: var(--primary);
+            background: rgba(139, 92, 246, 0.08);
+        }
+
+        /* --- Testimonials --- */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .testimonial-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 32px;
+            transition: all 0.3s;
+        }
+        .testimonial-card:hover {
+            border-color: rgba(139, 92, 246, 0.3);
+            transform: translateY(-4px);
+        }
+        .testimonial-stars {
+            color: #F59E0B;
+            font-size: 1rem;
+            margin-bottom: 16px;
+            letter-spacing: 2px;
+        }
+        .testimonial-text {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        .testimonial-author {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* --- CTA --- */
+        .cta-section {
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-box {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 80px 48px;
+            border-radius: 32px;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.12), rgba(236, 72, 153, 0.08));
+            border: 1px solid var(--border);
+            position: relative;
+        }
+        .cta-box h2 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+        .cta-box p {
+            color: var(--text-muted);
+            font-size: 1.15rem;
+            margin-bottom: 40px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* --- Footer --- */
+        footer {
+            padding: 64px 24px 32px;
+            border-top: 1px solid var(--border);
+        }
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        .footer-brand .nav-logo { margin-bottom: 12px; }
+        .footer-brand p {
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            max-width: 300px;
+        }
+        .footer-links { display: flex; gap: 64px; flex-wrap: wrap; }
+        .footer-links-col h4 {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+        .footer-links-col a {
+            display: block;
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 6px 0;
+            transition: color 0.3s;
+        }
+        .footer-links-col a:hover { color: var(--text); }
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 32px;
+            border-top: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .footer-bottom p {
+            color: var(--text-dim);
+            font-size: 0.8rem;
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 1024px) {
+            .features-grid { grid-template-columns: repeat(2, 1fr); }
+            .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            section { padding: 80px 20px; }
+            .nav-links { display: none; }
+            .steps-grid { grid-template-columns: 1fr; gap: 20px; }
+            .features-grid { grid-template-columns: 1fr; }
+            .pricing-grid { grid-template-columns: 1fr; max-width: 400px; }
+            .testimonials-grid { grid-template-columns: 1fr; }
+            .hero { padding: 100px 20px 60px; }
+            .hero-actions { flex-direction: column; align-items: center; }
+            .btn-primary, .btn-secondary { width: 100%; justify-content: center; max-width: 320px; }
+            .footer-top { flex-direction: column; }
+            .footer-links { gap: 32px; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+            .mockup-flow { flex-direction: column; }
+            .mockup-arrow { transform: rotate(90deg); }
+            .step-card { padding: 32px 24px; }
+            .cta-box { padding: 48px 24px; }
+        }
+
+        /* --- Accessibility --- */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-inner">
+            <div class="nav-logo">SenticCut</div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#download" class="nav-cta">Download Free</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="hero-orb hero-orb-1"></div>
+            <div class="hero-orb hero-orb-2"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="hero-badge-dot"></span>
+                Available on iOS
+            </div>
+            <h1>
+                Edit Videos with<br>
+                <span class="gradient">AI in Seconds</span>
+            </h1>
+            <p class="hero-sub">
+                Upload your video, describe your vision, and let AI handle the cuts, transitions, effects, and audio. No timeline. No learning curve.
+            </p>
+            <div class="hero-actions">
+                <a href="#download" class="btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 21.99C7.79 22.03 6.8 20.68 5.96 19.47C4.25 16.99 2.97 12.5 4.7 9.48C5.55 7.98 7.13 7.04 8.82 7.02C10.09 7 11.29 7.88 12.05 7.88C12.81 7.88 14.25 6.82 15.8 7C16.46 7.03 18.25 7.26 19.4 8.93C19.28 9.01 16.95 10.32 16.97 13.14C17 16.52 19.93 17.59 19.96 17.6C19.93 17.68 19.5 19.12 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
+                    Download for iOS
+                </a>
+                <a href="#how-it-works" class="btn-secondary">
+                    See How It Works
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works">
+        <div class="section-inner">
+            <div class="section-header animate-on-scroll">
+                <div class="section-label">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                    How It Works
+                </div>
+                <h2 class="section-title">Three Steps. That's It.</h2>
+                <p class="section-desc">No timelines, no complicated tools. Just results.</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card animate-on-scroll">
+                    <div class="step-icon">&#127916;</div>
+                    <div class="step-number">1</div>
+                    <h3>Pick Your Video</h3>
+                    <p>Select any video from your photo library. Supports all formats and lengths.</p>
+                </div>
+                <div class="step-card animate-on-scroll">
+                    <div class="step-icon">&#9997;&#65039;</div>
+                    <div class="step-number">2</div>
+                    <h3>Describe Your Vision</h3>
+                    <p>Tell the AI what you want: "Make it cinematic", "Fast-paced TikTok edit", or anything else.</p>
+                </div>
+                <div class="step-card animate-on-scroll">
+                    <div class="step-icon">&#10024;</div>
+                    <div class="step-number">3</div>
+                    <h3>AI Does the Rest</h3>
+                    <p>Smart cuts, smooth transitions, color grading, audio adjustments, and speed effects applied automatically.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Showcase -->
+    <section class="showcase">
+        <div class="section-inner">
+            <div class="section-header animate-on-scroll">
+                <div class="section-label">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                    See It in Action
+                </div>
+                <h2 class="section-title">From Raw Footage to Polished Edit</h2>
+                <p class="section-desc">The entire editing workflow happens in under 30 seconds.</p>
+            </div>
+            <div class="showcase-visual animate-on-scroll">
+                <div class="showcase-mockup">
+                    <div class="mockup-flow">
+                        <div class="mockup-step">
+                            <div class="mockup-step-icon">&#128247;</div>
+                            <div class="mockup-step-label">Raw Video</div>
+                        </div>
+                        <div class="mockup-arrow">&#10230;</div>
+                        <div class="mockup-step">
+                            <div class="mockup-step-icon">&#129302;</div>
+                            <div class="mockup-step-label">AI Analysis</div>
+                        </div>
+                        <div class="mockup-arrow">&#10230;</div>
+                        <div class="mockup-step">
+                            <div class="mockup-step-icon">&#127902;</div>
+                            <div class="mockup-step-label">Final Edit</div>
+                        </div>
+                    </div>
+                    <div style="color: var(--text-muted); font-size: 0.9rem; text-align: center; max-width: 500px;">
+                        The AI analyzes your footage, identifies key moments, applies intelligent cuts, transitions, color grading, and audio mixing &mdash; all from a single prompt.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features">
+        <div class="section-inner">
+            <div class="section-header animate-on-scroll">
+                <div class="section-label">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    Features
+                </div>
+                <h2 class="section-title">Everything AI Can Do for Your Videos</h2>
+                <p class="section-desc">Powered by advanced AI to deliver professional-quality edits.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">&#9986;&#65039;</div>
+                    <h3>Smart Cuts</h3>
+                    <p>AI identifies the best moments in your footage and creates perfectly timed cuts that keep viewers engaged.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">&#127912;</div>
+                    <h3>Color & Effects</h3>
+                    <p>Automatic brightness, contrast, and saturation adjustments. Get that cinematic look without manual tweaking.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">&#127925;</div>
+                    <h3>Audio Intelligence</h3>
+                    <p>Per-segment volume control, smooth fade-ins and fade-outs, and smart audio muting for silent moments.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">&#9889;</div>
+                    <h3>Speed Control</h3>
+                    <p>Dynamic speed adjustments per segment. Speed up boring parts, slow down key moments &mdash; all decided by AI.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">&#128256;</div>
+                    <h3>Smooth Transitions</h3>
+                    <p>Dissolves and fades applied between segments for a polished, professional flow.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">&#128274;</div>
+                    <h3>Privacy First</h3>
+                    <p>Your videos are never stored on our servers. They're processed and immediately discarded. Your content stays yours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" style="background: linear-gradient(180deg, var(--bg-dark) 0%, rgba(139, 92, 246, 0.03) 50%, var(--bg-dark) 100%);">
+        <div class="section-inner">
+            <div class="section-header animate-on-scroll">
+                <div class="section-label">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+                    Pricing
+                </div>
+                <h2 class="section-title">Start Free. Upgrade When You're Ready.</h2>
+                <p class="section-desc">Free daily credits to get started. No account required.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="price-card animate-on-scroll">
+                    <div class="price-name">Free</div>
+                    <div style="color: var(--text-muted); font-size: 0.9rem;">Daily free credits</div>
+                    <div class="price-amount">$0 <span>/ forever</span></div>
+                    <ul class="price-features">
+                        <li>Free credits every day</li>
+                        <li>Full AI editing features</li>
+                        <li>All transitions & effects</li>
+                        <li>Export to camera roll</li>
+                        <li>No account needed</li>
+                    </ul>
+                    <a href="#download" class="btn-price btn-price-secondary">Get Started Free</a>
+                </div>
+                <div class="price-card featured animate-on-scroll">
+                    <div class="price-name">Credit Packs</div>
+                    <div style="color: var(--text-muted); font-size: 0.9rem;">One-time purchase</div>
+                    <div class="price-amount">$<span style="font-size: 3rem; font-weight: 900; color: var(--text);">2.99</span> <span>+</span></div>
+                    <ul class="price-features">
+                        <li>Everything in Free</li>
+                        <li>Bulk credit packs</li>
+                        <li>Credits never expire</li>
+                        <li>No subscription required</li>
+                        <li>Priority processing</li>
+                    </ul>
+                    <a href="#download" class="btn-price btn-price-primary">Download & Buy</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section>
+        <div class="section-inner">
+            <div class="section-header animate-on-scroll">
+                <div class="section-label">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                    Reviews
+                </div>
+                <h2 class="section-title">Loved by Creators</h2>
+                <p class="section-desc">See what our users are saying about SenticCut.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-text">"I used to spend hours editing my TikToks. Now I just type what I want and the AI does everything. Game changer."</p>
+                    <div class="testimonial-author">Alex M.</div>
+                </div>
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-text">"The AI actually understands what makes a good edit. The transitions and cuts feel professional. Incredible for a mobile app."</p>
+                    <div class="testimonial-author">Sarah K.</div>
+                </div>
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-text">"Free credits every day and no subscription? This app respects its users. The editing quality is outstanding."</p>
+                    <div class="testimonial-author">David R.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="download" class="cta-section">
+        <div class="section-inner">
+            <div class="cta-box animate-on-scroll">
+                <h2>Ready to Edit Smarter?</h2>
+                <p>Download SenticCut and let AI transform your videos. Free credits included.</p>
+                <a href="https://apps.apple.com/app/senticcut/id6740043775" target="_blank" rel="noopener" class="btn-primary" style="display: inline-flex;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 21.99C7.79 22.03 6.8 20.68 5.96 19.47C4.25 16.99 2.97 12.5 4.7 9.48C5.55 7.98 7.13 7.04 8.82 7.02C10.09 7 11.29 7.88 12.05 7.88C12.81 7.88 14.25 6.82 15.8 7C16.46 7.03 18.25 7.26 19.4 8.93C19.28 9.01 16.95 10.32 16.97 13.14C17 16.52 19.93 17.59 19.96 17.6C19.93 17.68 19.5 19.12 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
+                    Download on the App Store
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="nav-logo" style="display: block;">SenticCut</div>
+                    <p>AI-powered video editing for iOS. Fast, simple, and private.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-links-col">
+                        <h4>Product</h4>
+                        <a href="#features">Features</a>
+                        <a href="#how-it-works">How It Works</a>
+                        <a href="#pricing">Pricing</a>
+                        <a href="#download">Download</a>
+                    </div>
+                    <div class="footer-links-col">
+                        <h4>Legal</h4>
+                        <a href="PrivacyPolicy.html">Privacy Policy</a>
+                        <a href="TermsOfService.md">Terms of Service</a>
+                    </div>
+                    <div class="footer-links-col">
+                        <h4>Company</h4>
+                        <a href="https://synthesislogic.com">SynthesisLogic</a>
+                        <a href="mailto:support@synthesislogic.com">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025&ndash;2026 SenticCut by SynthesisLogic. All rights reserved.</p>
+                <p>Made with AI &mdash; for AI video editing.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Animation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+            document.querySelectorAll('.animate-on-scroll').forEach(function(el) {
+                observer.observe(el);
+            });
+        });
+    </script>
+
+</body>
+</html>
